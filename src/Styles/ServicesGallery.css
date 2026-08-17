@@ -1,0 +1,157 @@
+/* =========================================================
+   LUMIÈRE — SERVICES GALLERY (VIEW ALL)
+   Prefix: sg-
+   Reuses .luxury-service-card styling from Services.css —
+   import both stylesheets in ServicesGallery.jsx
+========================================================= */
+
+.sg-section,
+.sg-section * {
+  box-sizing: border-box;
+}
+
+.sg-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0 90px;
+
+  background:
+    radial-gradient(circle at 8% 10%, rgba(190, 147, 118, 0.06), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #fdfaf7 50%, #ffffff 100%);
+}
+
+.sg-container {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 60px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.sg-header {
+  margin-bottom: 34px;
+}
+
+.sg-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 26px;
+  color: #8c7b6d;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.sg-back-link:hover {
+  color: #6b4c3a;
+}
+
+.sg-title {
+  margin: 10px 0 0;
+  color: #2d2722;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.sg-title span {
+  color: #9b6952;
+}
+
+/* =========================================================
+   GRID — sequential reveal
+========================================================= */
+
+.sg-card {
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(.2,.7,.2,1);
+}
+
+.sg-card.sg-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* =========================================================
+   LOAD MORE
+========================================================= */
+
+.sg-load-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 44px;
+}
+
+.sg-load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 34px;
+  border: 1px solid #d8bca9;
+  border-radius: 50px;
+  background: transparent;
+  color: #6b4c3a;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.sg-load-more-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #49372f, #72503f);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+.sg-load-more-btn:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.sg-spin {
+  animation: sgSpin 0.8s linear infinite;
+}
+
+@keyframes sgSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .sg-section {
+    padding: 80px 0 70px;
+  }
+
+  .sg-container {
+    width: calc(100% - 26px);
+  }
+
+  .sg-title {
+    font-size: 30px;
+  }
+}

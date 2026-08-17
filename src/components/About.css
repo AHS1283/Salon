@@ -1,0 +1,878 @@
+/* =========================================================
+   LUMIERE ABOUT SECTION
+   IMAGE FOCUSED / LUXURY / MODERN
+========================================================= */
+
+.about-section {
+  position: relative;
+  width: 100%;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.about-container {
+  width: min(1320px, calc(100% - 70px));
+
+  min-height: 390px;
+
+  margin: 0 auto;
+
+  padding: 55px 0;
+
+  display: grid;
+
+  /*
+    IMAGE   = 44%
+    CONTENT = 23%
+    FEATURE = 33%
+  */
+
+  grid-template-columns:
+    44%
+    23%
+    33%;
+
+  gap: 28px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.about-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 310px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #eee;
+
+  box-shadow:
+    0 22px 55px rgba(45, 35, 28, 0.13);
+
+  animation:
+    aboutImageReveal
+    0.9s
+    ease
+    both;
+}
+
+.about-image-wrapper img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 1s cubic-bezier(.2,.7,.2,1),
+    filter 0.6s ease;
+}
+
+.about-image-wrapper:hover img {
+  transform: scale(1.055);
+}
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.about-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.04),
+      rgba(0,0,0,0.08)
+    );
+
+  opacity: 0.5;
+}
+
+/* =========================================================
+   IMAGE ANIMATION
+========================================================= */
+
+@keyframes aboutImageReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0);
+  }
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-content {
+  align-self: center;
+
+  max-width: 280px;
+
+  padding: 5px 0;
+
+  animation:
+    aboutContentReveal
+    0.9s
+    ease
+    0.15s
+    both;
+}
+
+@keyframes aboutContentReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.about-eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #a66d56;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.about-content h2 {
+  margin: 0 0 16px;
+
+  color: #2d2722;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 35px;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.8px;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.about-content p {
+  max-width: 255px;
+
+  margin: 0 0 20px;
+
+  color: #6d655e;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LEARN MORE BUTTON
+========================================================= */
+
+.about-learn-btn {
+  height: 36px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 17px;
+
+  border: 1px solid #b28a74;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #342c27;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.45px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-learn-btn:hover {
+  background: #302923;
+
+  border-color: #302923;
+
+  color: #fff;
+
+  transform:
+    translateY(-2px);
+}
+
+.about-learn-btn:active {
+  transform:
+    translateY(0)
+    scale(0.98);
+}
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.about-features {
+  width: 100%;
+
+  min-height: 270px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  align-items: stretch;
+
+  border-left: 1px solid #eee5dd;
+
+  /*
+    Moves the whole right block
+    slightly toward the left.
+  */
+
+  margin-left: -8px;
+
+  animation:
+    featuresReveal
+    0.9s
+    ease
+    0.3s
+    both;
+}
+
+/* =========================================================
+   FEATURES ANIMATION
+========================================================= */
+
+@keyframes featuresReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0);
+  }
+}
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.about-feature {
+  position: relative;
+
+  min-height: 135px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px 15px;
+
+  text-align: center;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.about-feature:hover {
+  transform:
+    translateY(-4px);
+}
+
+/* =========================================================
+   VERTICAL SEPARATOR
+========================================================= */
+
+.about-feature:nth-child(even)::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 20px;
+
+  bottom: 20px;
+
+  width: 1px;
+
+  background: #eee5dd;
+}
+
+/* =========================================================
+   HORIZONTAL SEPARATOR
+========================================================= */
+
+.about-feature:nth-child(n + 3)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 18px;
+
+  right: 18px;
+
+  top: 0;
+
+  height: 1px;
+
+  background: #eee5dd;
+}
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
+
+.about-feature-icon {
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 11px;
+
+  border-radius: 50%;
+
+  background: #faf6f1;
+
+  color: #a4775f;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.about-feature:hover .about-feature-icon {
+  transform:
+    scale(1.08)
+    rotate(3deg);
+
+  background: #f3e9df;
+
+  color: #8f604b;
+}
+
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
+.about-feature h3 {
+  margin: 0 0 7px;
+
+  color: #302923;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   FEATURE DESCRIPTION
+========================================================= */
+
+.about-feature p {
+  max-width: 120px;
+
+  margin: 0;
+
+  color: #746b64;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .about-container {
+    width:
+      min(
+        1380px,
+        calc(100% - 80px)
+      );
+
+    min-height: 430px;
+
+    padding: 60px 0;
+
+    grid-template-columns:
+      45%
+      22%
+      33%;
+
+    gap: 30px;
+  }
+
+  .about-image-wrapper {
+    height: 340px;
+  }
+
+  .about-content {
+    max-width: 280px;
+  }
+
+  .about-content h2 {
+    font-size: 39px;
+  }
+
+  .about-content p {
+    font-size: 11.5px;
+  }
+
+  .about-features {
+    min-height: 290px;
+
+    margin-left: -10px;
+  }
+
+  .about-feature-icon {
+    width: 56px;
+
+    height: 56px;
+  }
+
+  .about-feature h3 {
+    font-size: 10.5px;
+  }
+
+  .about-feature p {
+    font-size: 8.5px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .about-container {
+    width:
+      calc(100% - 40px);
+
+    grid-template-columns:
+      40%
+      25%
+      35%;
+
+    gap: 22px;
+
+    padding: 45px 0;
+  }
+
+  .about-image-wrapper {
+    height: 280px;
+  }
+
+  .about-content {
+    max-width: 250px;
+  }
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  .about-content p {
+    font-size: 10px;
+  }
+
+  .about-features {
+    min-height: 250px;
+
+    margin-left: 0;
+  }
+
+  .about-feature {
+    padding:
+      15px 8px;
+  }
+
+  .about-feature-icon {
+    width: 46px;
+
+    height: 46px;
+  }
+
+  .about-feature h3 {
+    font-size: 9px;
+  }
+
+  .about-feature p {
+    font-size: 7.5px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .about-container {
+    width:
+      calc(100% - 28px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 25px;
+
+    padding: 38px 0;
+  }
+
+  /* IMAGE */
+
+  .about-image-wrapper {
+    width: 100%;
+
+    height: 290px;
+
+    border-radius: 16px;
+  }
+
+  /* CONTENT */
+
+  .about-content {
+    width: 100%;
+
+    max-width: none;
+
+    padding:
+      0 4px;
+  }
+
+  .about-eyebrow {
+    font-size: 8px;
+
+    margin-bottom: 8px;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+
+    line-height: 1.05;
+
+    margin-bottom: 12px;
+  }
+
+  .about-content p {
+    max-width: 330px;
+
+    font-size: 10.5px;
+
+    line-height: 1.65;
+
+    margin-bottom: 15px;
+  }
+
+  .about-learn-btn {
+    height: 35px;
+
+    padding:
+      0 16px;
+
+    font-size: 8px;
+  }
+
+  /* FEATURES */
+
+  .about-features {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    min-height: auto;
+
+    margin-left: 0;
+
+    border-left: none;
+
+    border-top:
+      1px solid #eee5dd;
+  }
+
+  .about-feature {
+    min-height: 150px;
+
+    padding:
+      20px 10px;
+  }
+
+  .about-feature:nth-child(even)::before {
+    display: block;
+  }
+
+  .about-feature:nth-child(n + 3)::after {
+    display: block;
+  }
+
+  .about-feature-icon {
+    width: 50px;
+
+    height: 50px;
+
+    margin-bottom: 10px;
+  }
+
+  .about-feature h3 {
+    font-size: 10px;
+
+    margin-bottom: 6px;
+  }
+
+  .about-feature p {
+    max-width: 125px;
+
+    font-size: 8px;
+
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .about-container {
+    width:
+      calc(100% - 22px);
+
+    gap: 22px;
+
+    padding: 30px 0;
+  }
+
+  .about-image-wrapper {
+    height: 245px;
+
+    border-radius: 14px;
+  }
+
+  .about-content h2 {
+    font-size: 29px;
+  }
+
+  .about-content p {
+    font-size: 10px;
+  }
+
+  .about-feature {
+    min-height: 145px;
+
+    padding:
+      17px 6px;
+  }
+
+  .about-feature-icon {
+    width: 46px;
+
+    height: 46px;
+  }
+
+  .about-feature h3 {
+    font-size: 9px;
+  }
+
+  .about-feature p {
+    font-size: 7.5px;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .about-container {
+    width:
+      calc(100% - 18px);
+
+    padding:
+      25px 0;
+  }
+
+  .about-image-wrapper {
+    height: 220px;
+  }
+
+  .about-content h2 {
+    font-size: 27px;
+  }
+
+  .about-feature {
+    min-height: 140px;
+
+    padding:
+      14px 5px;
+  }
+
+  .about-feature-icon {
+    width: 43px;
+
+    height: 43px;
+  }
+
+  .about-feature h3 {
+    font-size: 8.5px;
+  }
+
+  .about-feature p {
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-image-wrapper,
+  .about-content,
+  .about-features {
+    animation: none;
+  }
+
+  .about-image-wrapper img,
+  .about-feature,
+  .about-feature-icon,
+  .about-learn-btn {
+    transition: none;
+  }
+}

@@ -1,0 +1,967 @@
+/* =========================================================
+   LUMIÈRE — TEAM SECTION
+   Compact Luxury / Modern / Fully Responsive
+
+   DESKTOP:
+   Team cards → Why Choose Us below
+
+   TABLET / MOBILE:
+   Existing responsive behavior preserved
+========================================================= */
+
+.team,
+.team * {
+  box-sizing: border-box;
+}
+
+.team {
+  position: relative;
+  width: 100%;
+  padding: 68px 0 72px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fcf9f6 50%,
+      #ffffff 100%
+    );
+
+  overflow: hidden;
+
+  scroll-margin-top: 90px;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.team::before {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  top: -210px;
+  left: -210px;
+
+  border-radius: 50%;
+
+  background: rgba(181, 132, 100, 0.055);
+
+  filter: blur(35px);
+
+  pointer-events: none;
+}
+
+.team::after {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  right: -190px;
+  bottom: -200px;
+
+  border-radius: 50%;
+
+  background: rgba(205, 164, 135, 0.045);
+
+  filter: blur(35px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.team .wrap {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1240px, calc(100% - 30px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.team .eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #a06d54;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.team > .wrap > h2 {
+  margin: 0 0 28px;
+
+  color: #2d2723;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 37px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   KEPT FOR EXISTING TABLET / MOBILE STRUCTURE
+========================================================= */
+
+.team-top {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    225px;
+
+  gap: 18px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   TEAM GRID
+========================================================= */
+
+.team-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   TEAM CARD
+========================================================= */
+
+.team-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid #e8ddd5;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 6px 20px rgba(50, 37, 29, 0.055);
+
+  text-align: center;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation:
+    teamCardReveal
+    0.65s
+    cubic-bezier(.2, .7, .2, 1)
+    forwards;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* =========================================================
+   ANIMATION DELAYS
+========================================================= */
+
+.team-card:nth-child(1) {
+  animation-delay: .04s;
+}
+
+.team-card:nth-child(2) {
+  animation-delay: .10s;
+}
+
+.team-card:nth-child(3) {
+  animation-delay: .16s;
+}
+
+.team-card:nth-child(4) {
+  animation-delay: .22s;
+}
+
+.team-card:nth-child(5) {
+  animation-delay: .28s;
+}
+
+.team-card:nth-child(6) {
+  animation-delay: .34s;
+}
+
+
+/* =========================================================
+   CARD REVEAL
+========================================================= */
+
+@keyframes teamCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.team-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c9a38e;
+
+  box-shadow:
+    0 14px 28px rgba(50, 37, 29, 0.11);
+}
+
+
+/* =========================================================
+   TEAM IMAGE
+========================================================= */
+
+.team-card .ph {
+  position: relative;
+
+  width: 100%;
+  height: 190px;
+
+  overflow: hidden;
+
+  background: #eee7e1;
+}
+
+.team-card .ph::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 65%,
+      rgba(35, 27, 22, 0.12)
+    );
+
+  pointer-events: none;
+}
+
+.team-card .ph img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform .7s cubic-bezier(.2,.7,.2,1),
+    filter .4s ease;
+}
+
+.team-card:hover .ph img {
+  transform: scale(1.06);
+
+  filter: brightness(1.03);
+}
+
+
+/* =========================================================
+   TEAM NAME
+========================================================= */
+
+.team-card h4 {
+  margin: 11px 7px 3px;
+
+  color: #302923;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   TEAM ROLE
+========================================================= */
+
+.team-card p {
+  margin: 0;
+
+  color: #8a7d74;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10.5px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.team-card .socials {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 9px 0 11px;
+}
+
+.team-card .socials svg {
+  width: 23px;
+  height: 23px;
+
+  padding: 5px;
+
+  border: 1px solid #e5d8cf;
+
+  border-radius: 50%;
+
+  color: #96684f;
+
+  background: #fbf7f3;
+
+  cursor: pointer;
+
+  transition:
+    transform .25s ease,
+    color .25s ease,
+    background .25s ease,
+    border-color .25s ease;
+}
+
+.team-card .socials svg:hover {
+  color: #ffffff;
+
+  background: #302923;
+
+  border-color: #302923;
+
+  transform:
+    translateY(-2px)
+    scale(1.05);
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.why-card {
+  position: relative;
+
+  padding: 20px 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2d3c8;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffdfb,
+      #f7eee8
+    );
+
+  box-shadow:
+    0 7px 22px rgba(51, 38, 30, 0.065);
+
+  height: fit-content;
+
+  align-self: start;
+}
+
+.why-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  top: -75px;
+  right: -70px;
+
+  border-radius: 50%;
+
+  background: rgba(176, 126, 94, 0.075);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   WHY TITLE
+========================================================= */
+
+.why-card h3 {
+  position: relative;
+
+  margin: 0 0 16px;
+
+  color: #302923;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   WHY LIST
+========================================================= */
+
+.why-card ul {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.why-card li {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 7px;
+
+  color: #71665e;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10.5px;
+
+  line-height: 1.4;
+}
+
+.why-card li svg {
+  flex-shrink: 0;
+
+  width: 14px;
+  height: 14px;
+
+  margin-top: 1px;
+
+  color: #a06c53;
+
+  stroke-width: 2.3;
+}
+
+
+/* =========================================================
+   BOOK BUTTON
+========================================================= */
+
+.why-card .btn {
+  width: 100%;
+
+  min-height: 39px;
+
+  margin-top: 17px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 0;
+
+  border-radius: 5px;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: .45px;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+.why-card .btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(48, 41, 35, 0.16);
+}
+
+
+/* =========================================================
+   DESKTOP ONLY
+   WHY CHOOSE US BELOW TEAM CARDS
+========================================================= */
+
+@media (min-width: 1051px) {
+
+  /*
+     New JSX structure:
+
+     team-grid
+        ↓
+     why-card
+
+     Therefore Why Choose Us naturally sits below
+     the complete team grid.
+  */
+
+  .team-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .why-card {
+    width: 100%;
+
+    margin-top: 22px;
+
+    /*
+       Full desktop width
+    */
+    grid-column: auto;
+
+    align-self: auto;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .team .wrap {
+    width:
+      min(1240px, calc(100% - 30px));
+  }
+
+  .team {
+    padding:
+      76px 0 82px;
+  }
+
+  .team-grid {
+    gap: 14px;
+  }
+
+  .team-card .ph {
+    height: 205px;
+  }
+
+  .why-card {
+    margin-top: 24px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   EXISTING BEHAVIOR PRESERVED
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .team .wrap {
+    width: calc(100% - 24px);
+  }
+
+  .team-top {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .team-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+  .why-card {
+    padding: 18px 20px;
+  }
+
+  .why-card ul {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 9px 25px;
+  }
+
+  .why-card .btn {
+    width: 220px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   EXISTING BEHAVIOR PRESERVED
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .team {
+    padding: 52px 0 60px;
+
+    scroll-margin-top: 70px;
+  }
+
+  .team .wrap {
+    width: calc(100% - 24px);
+  }
+
+
+  /* Header */
+
+  .team .eyebrow {
+    text-align: center;
+
+    font-size: 9px;
+  }
+
+  .team > .wrap > h2 {
+    margin-bottom: 24px;
+
+    text-align: center;
+
+    font-size: 30px;
+  }
+
+
+  /* Team */
+
+  .team-top {
+    display: block;
+  }
+
+  .team-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .team-card {
+    border-radius: 9px;
+  }
+
+  .team-card .ph {
+    height: 165px;
+  }
+
+  .team-card h4 {
+    margin-top: 10px;
+
+    font-size: 13px;
+  }
+
+  .team-card p {
+    font-size: 10px;
+  }
+
+  .team-card .socials {
+    margin:
+      8px 0 10px;
+
+    gap: 6px;
+  }
+
+  .team-card .socials svg {
+    width: 22px;
+    height: 22px;
+
+    padding: 5px;
+  }
+
+
+  /* Why Card */
+
+  .why-card {
+    margin-top: 14px;
+
+    padding: 18px 17px;
+
+    border-radius: 10px;
+  }
+
+  .why-card h3 {
+    margin-bottom: 14px;
+
+    font-size: 22px;
+  }
+
+  .why-card ul {
+    gap: 8px;
+  }
+
+  .why-card li {
+    font-size: 10.5px;
+  }
+
+  .why-card .btn {
+    min-height: 40px;
+
+    margin-top: 16px;
+
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .team {
+    padding: 45px 0 52px;
+  }
+
+  .team .wrap {
+    width: calc(100% - 12px);
+  }
+
+  .team > .wrap > h2 {
+    font-size: 27px;
+
+    margin-bottom: 21px;
+  }
+
+  .team-grid {
+    gap: 8px;
+  }
+
+  .team-card .ph {
+    height: 145px;
+  }
+
+  .team-card h4 {
+    font-size: 12px;
+  }
+
+  .team-card p {
+    font-size: 9px;
+  }
+
+  .team-card .socials svg {
+    width: 21px;
+    height: 21px;
+
+    padding: 5px;
+  }
+
+
+  /* Compact Why */
+
+  .why-card {
+    margin-top: 12px;
+
+    padding: 17px 15px;
+  }
+
+  .why-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 13px;
+  }
+
+  .why-card ul {
+    gap: 7px;
+  }
+
+  .why-card li {
+    font-size: 9.5px;
+
+    gap: 7px;
+  }
+
+  .why-card li svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .why-card .btn {
+    min-height: 39px;
+
+    margin-top: 15px;
+
+    font-size: 9.5px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .team {
+    padding-top: 42px;
+  }
+
+  .team .wrap {
+    width: calc(100% - 10px);
+  }
+
+  .team > .wrap > h2 {
+    font-size: 25px;
+  }
+
+  .team-card .ph {
+    height: 130px;
+  }
+
+  .team-card h4 {
+    font-size: 11px;
+  }
+
+  .team-card p {
+    font-size: 8.5px;
+  }
+
+  .team-card .socials svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .why-card {
+    padding: 15px 13px;
+  }
+
+  .why-card h3 {
+    font-size: 20px;
+  }
+
+  .why-card li {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .team-card {
+    animation: none;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+  .team-card,
+  .team-card .ph img,
+  .team-card .socials svg,
+  .why-card .btn {
+    transition: none;
+  }
+}

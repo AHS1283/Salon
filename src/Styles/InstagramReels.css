@@ -1,0 +1,1575 @@
+/* =========================================================
+   LUMIÈRE SALON & SPA
+   INSTAGRAM REELS
+   Premium / Compact / Fully Responsive
+========================================================= */
+
+.lr-section,
+.lr-section *,
+.lr-modal-overlay,
+.lr-modal-overlay * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.lr-section {
+  position: relative;
+  width: 100%;
+  padding: 85px 0 75px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(185, 145, 105, 0.1),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 88%,
+      rgba(185, 145, 105, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #f8f4ef 0%,
+      #f5f0e9 50%,
+      #faf7f3 100%
+    );
+
+  color: #29231f;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.lr-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  top: -230px;
+  left: -180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(190, 150, 110, 0.055);
+
+  filter: blur(75px);
+
+  pointer-events: none;
+}
+
+.lr-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -230px;
+  bottom: -250px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(190, 150, 110, 0.045);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.lr-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(
+    1180px,
+    calc(100% - 40px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.lr-header {
+  display: grid;
+
+  grid-template-columns:
+    1fr 0.8fr;
+
+  gap: 50px;
+
+  align-items: end;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.lr-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #a47b59;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.lr-title {
+  margin: 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(
+      36px,
+      4vw,
+      52px
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  color: #2b2521;
+}
+
+.lr-title span {
+  color: #a47b59;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   RIGHT HEADER
+========================================================= */
+
+.lr-header-right {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+.lr-description {
+  max-width: 390px;
+
+  margin: 0;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.8;
+
+  color: #756d66;
+}
+
+
+/* =========================================================
+   FOLLOW
+========================================================= */
+
+.lr-follow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding-bottom: 7px;
+
+  border-bottom:
+    1px solid #bba28d;
+
+  text-decoration: none;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color: #554b44;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.lr-follow svg:last-child {
+  transition:
+    transform 0.3s ease;
+}
+
+.lr-follow:hover {
+  color: #a47b59;
+  border-color: #a47b59;
+}
+
+.lr-follow:hover svg:last-child {
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.lr-heading-line {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 35px;
+}
+
+.lr-heading-line span {
+  width: 42px;
+  height: 1px;
+
+  background:
+    #d6c7b8;
+}
+
+.lr-heading-line i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background:
+    #a47b59;
+
+  transform:
+    rotate(45deg);
+}
+
+
+/* =========================================================
+   REELS GRID
+========================================================= */
+
+.lr-track {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.lr-card {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 2px;
+
+  overflow: hidden;
+
+  background:
+    #d8d0c8;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  aspect-ratio:
+    0.72 / 1;
+
+  box-shadow:
+    0 12px 35px
+    rgba(
+      50,
+      38,
+      28,
+      0.1
+    );
+
+  transform:
+    translateY(0);
+
+  transition:
+    transform 0.45s
+      cubic-bezier(
+        0.2,
+        0.7,
+        0.2,
+        1
+      ),
+    box-shadow 0.45s ease;
+}
+
+.lr-card:hover {
+  transform:
+    translateY(-7px);
+
+  box-shadow:
+    0 22px 45px
+    rgba(
+      50,
+      38,
+      28,
+      0.17
+    );
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.lr-image-wrap {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  background:
+    #d8d0c8;
+}
+
+
+/* =========================================================
+   THUMBNAIL
+   (sirf tab render hoti hai jab video load na ho paaye —
+   normal flow mein yeh dikhti hi nahi)
+========================================================= */
+
+.lr-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 1;
+
+  transform:
+    scale(1);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.8s
+      cubic-bezier(
+        0.2,
+        0.7,
+        0.2,
+        1
+      );
+}
+
+
+/* =========================================================
+   VIDEO PREVIEW
+
+   IMPORTANT (UPDATED):
+   Video ab hi thumbnail hai, isliye hamesha visible
+   rehta hai — sirf .lr-card-playing ka wait nahi karta.
+   Play hote waqt bas thoda scale-up (zoom) hota hai.
+========================================================= */
+
+.lr-preview-video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 2;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    scale(1);
+
+  pointer-events: none;
+
+  background:
+    #111;
+
+  transition:
+    transform 0.8s
+      cubic-bezier(
+        0.2,
+        0.7,
+        0.2,
+        1
+      );
+}
+
+
+/* =========================================================
+   ACTIVE / PLAYING STATE
+   Video play hote waqt halka zoom-in effect
+========================================================= */
+
+.lr-card.lr-card-playing
+.lr-preview-video {
+  transform:
+    scale(1.06);
+}
+
+.lr-card.lr-card-playing
+.lr-image {
+  opacity: 0;
+
+  transform:
+    scale(1.06);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.lr-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(
+        20,
+        15,
+        10,
+        0.18
+      ) 0%,
+
+      rgba(
+        20,
+        15,
+        10,
+        0.02
+      ) 38%,
+
+      rgba(
+        20,
+        15,
+        10,
+        0.7
+      ) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.lr-top {
+  position: absolute;
+
+  z-index: 7;
+
+  top: 15px;
+
+  left: 15px;
+
+  right: 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.lr-instagram {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      20,
+      15,
+      10,
+      0.18
+    );
+
+  color: #ffffff;
+
+  backdrop-filter:
+    blur(8px);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lr-card:hover
+.lr-instagram {
+  background:
+    rgba(
+      164,
+      123,
+      89,
+      0.85
+    );
+
+  transform:
+    rotate(-8deg);
+}
+
+.lr-reel-label {
+  padding:
+    5px 8px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.35
+    );
+
+  background:
+    rgba(
+      20,
+      15,
+      10,
+      0.2
+    );
+
+  backdrop-filter:
+    blur(8px);
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   PLAY
+========================================================= */
+
+.lr-play {
+  position: absolute;
+
+  z-index: 7;
+
+  top: 50%;
+  left: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.65
+    );
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      25,
+      20,
+      16,
+      0.28
+    );
+
+  color: #ffffff;
+
+  backdrop-filter:
+    blur(8px);
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  transition:
+    transform 0.35s ease,
+    background 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.lr-card:hover
+.lr-play {
+  transform:
+    translate(
+      -50%,
+      -50%
+    )
+    scale(1.1);
+
+  background:
+    rgba(
+      164,
+      123,
+      89,
+      0.78
+    );
+}
+
+
+/*
+   When video is playing, make the play icon
+   slightly transparent.
+*/
+
+.lr-card-playing
+.lr-play {
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.lr-content {
+  position: absolute;
+
+  z-index: 7;
+
+  left: 17px;
+  right: 17px;
+
+  bottom: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.lr-category {
+  display: inline-block;
+
+  margin-bottom: 5px;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.75
+    );
+}
+
+.lr-card-title {
+  margin: 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: #ffffff;
+}
+
+.lr-watch {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 10px;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.2px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
+
+  transition:
+    gap 0.3s ease;
+}
+
+.lr-card:hover
+.lr-watch {
+  gap: 9px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE HINT
+========================================================= */
+
+.lr-swipe {
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.lr-swipe span {
+  width: 25px;
+  height: 1px;
+
+  background:
+    #cbbbab;
+}
+
+.lr-swipe p {
+  margin: 0;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color:
+    #a78d76;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.lr-modal-overlay {
+  position: fixed;
+
+  z-index: 99999;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    rgba(
+      18,
+      14,
+      11,
+      0.84
+    );
+
+  backdrop-filter:
+    blur(12px);
+
+  animation:
+    lrModalFade
+    0.25s ease;
+}
+
+@keyframes lrModalFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.lr-modal {
+  position: relative;
+
+  width:
+    min(
+      430px,
+      100%
+    );
+
+  max-height: 94vh;
+
+  overflow: hidden;
+
+  background:
+    #f7f3ee;
+
+  box-shadow:
+    0 30px 90px
+    rgba(
+      0,
+      0,
+      0,
+      0.4
+    );
+
+  animation:
+    lrModalUp
+    0.35s ease;
+}
+
+@keyframes lrModalUp {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.lr-modal-close {
+  position: absolute;
+
+  z-index: 20;
+
+  top: 12px;
+  right: 12px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      20,
+      15,
+      10,
+      0.5
+    );
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  backdrop-filter:
+    blur(8px);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lr-modal-close:hover {
+  background:
+    #a47b59;
+
+  transform:
+    rotate(90deg);
+}
+
+
+/* =========================================================
+   MODAL VIDEO
+========================================================= */
+
+.lr-modal-video-wrap {
+  position: relative;
+
+  width: 100%;
+
+  background:
+    #111111;
+}
+
+.lr-modal-video {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-height: 72vh;
+
+  aspect-ratio:
+    0.68 / 1;
+
+  object-fit: cover;
+
+  background:
+    #111111;
+}
+
+
+/* =========================================================
+   SOUND BUTTON
+========================================================= */
+
+.lr-sound-button {
+  position: absolute;
+
+  z-index: 15;
+
+  right: 14px;
+  bottom: 14px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.55
+    );
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      20,
+      15,
+      10,
+      0.55
+    );
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  backdrop-filter:
+    blur(8px);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lr-sound-button:hover {
+  background:
+    #a47b59;
+
+  transform:
+    scale(1.06);
+}
+
+
+/* =========================================================
+   MODAL INFO
+========================================================= */
+
+.lr-modal-info {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    18px 20px 12px;
+}
+
+.lr-modal-text {
+  min-width: 0;
+}
+
+.lr-modal-category {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+
+  color:
+    #a47b59;
+}
+
+.lr-modal-text h3 {
+  margin: 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 23px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color:
+    #2c2520;
+}
+
+
+/* =========================================================
+   INSTAGRAM LINK
+========================================================= */
+
+.lr-modal-ig-link {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding:
+    0 0 6px;
+
+  border: 0;
+
+  border-bottom:
+    1px solid
+    #bda58f;
+
+  background:
+    transparent;
+
+  cursor: pointer;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color:
+    #665b53;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.lr-modal-ig-link:hover {
+  color:
+    #a47b59;
+
+  border-color:
+    #a47b59;
+}
+
+
+/* =========================================================
+   SOUND HINT
+========================================================= */
+
+.lr-modal-sound-hint {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  padding:
+    0 20px 16px;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 6px;
+
+  letter-spacing: 0.8px;
+
+  color:
+    #9b8e82;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .lr-track {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .lr-section {
+    padding:
+      70px 0 60px;
+  }
+
+  .lr-container {
+    width:
+      min(
+        calc(100% - 30px),
+        680px
+      );
+  }
+
+  .lr-header {
+    grid-template-columns:
+      1fr;
+
+    gap: 20px;
+  }
+
+  .lr-title {
+    font-size: 40px;
+  }
+
+  .lr-track {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 14px;
+  }
+
+  .lr-card-title {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .lr-section {
+    padding:
+      65px 0 55px;
+  }
+
+  .lr-container {
+    width:
+      calc(100% - 24px);
+  }
+
+  .lr-eyebrow {
+    font-size: 7px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .lr-title {
+    font-size: 34px;
+
+    letter-spacing:
+      -0.6px;
+  }
+
+  .lr-description {
+    font-size: 9px;
+
+    line-height: 1.7;
+  }
+
+  .lr-heading-line {
+    margin-bottom: 27px;
+
+    gap: 9px;
+  }
+
+  .lr-heading-line span {
+    width: 27px;
+  }
+
+  .lr-track {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 10px;
+  }
+
+  .lr-card {
+    aspect-ratio:
+      0.68 / 1;
+
+    box-shadow:
+      0 8px 22px
+      rgba(
+        50,
+        38,
+        28,
+        0.1
+      );
+  }
+
+  .lr-card:hover {
+    transform:
+      translateY(-3px);
+  }
+
+  .lr-top {
+    top: 10px;
+
+    left: 10px;
+    right: 10px;
+  }
+
+  .lr-instagram {
+    width: 26px;
+    height: 26px;
+  }
+
+  .lr-reel-label {
+    padding:
+      4px 6px;
+
+    font-size: 5px;
+  }
+
+  .lr-play {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lr-content {
+    left: 11px;
+    right: 11px;
+
+    bottom: 12px;
+  }
+
+  .lr-category {
+    font-size: 5px;
+
+    letter-spacing:
+      1.5px;
+
+    margin-bottom: 4px;
+  }
+
+  .lr-card-title {
+    font-size: 17px;
+  }
+
+  .lr-watch {
+    margin-top: 7px;
+
+    font-size: 5px;
+
+    letter-spacing:
+      0.8px;
+  }
+
+  .lr-swipe {
+    display: none;
+  }
+
+
+  /* =======================================================
+     MOBILE MODAL
+  ======================================================= */
+
+  .lr-modal-overlay {
+    padding: 10px;
+  }
+
+  .lr-modal {
+    width: 100%;
+
+    max-width: 390px;
+  }
+
+  .lr-modal-video {
+    max-height: 72vh;
+  }
+
+  .lr-modal-info {
+    padding:
+      16px 16px 10px;
+
+    gap: 12px;
+  }
+
+  .lr-modal-text h3 {
+    font-size: 20px;
+  }
+
+  .lr-modal-ig-link span {
+    display: none;
+  }
+
+  .lr-modal-sound-hint {
+    padding-bottom: 14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .lr-container {
+    width:
+      calc(100% - 18px);
+  }
+
+  .lr-title {
+    font-size: 31px;
+  }
+
+  .lr-track {
+    gap: 8px;
+  }
+
+  .lr-card-title {
+    font-size: 15px;
+  }
+
+  .lr-play {
+    width: 36px;
+    height: 36px;
+  }
+
+  .lr-content {
+    left: 9px;
+    right: 9px;
+
+    bottom: 10px;
+  }
+
+  .lr-modal-text h3 {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .lr-section *,
+  .lr-section *::before,
+  .lr-section *::after,
+  .lr-modal-overlay *,
+  .lr-modal-overlay *::before,
+  .lr-modal-overlay *::after {
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+  }
+}

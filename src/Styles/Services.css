@@ -1,0 +1,1041 @@
+/* =========================================================
+   LUMIÈRE SALON & SPA
+   SERVICES SECTION
+   Premium / Centered / Responsive
+========================================================= */
+
+.luxury-services,
+.luxury-services * {
+  box-sizing: border-box;
+}
+
+.luxury-services {
+  position: relative;
+  width: 100%;
+  padding: 70px 0 75px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(185, 139, 109, 0.06),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(209, 174, 145, 0.05),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fdfbf9 50%,
+      #ffffff 100%
+    );
+
+  color: #2d2722;
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.luxury-services::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  left: -220px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background: rgba(185, 139, 109, 0.045);
+
+  filter: blur(25px);
+
+  pointer-events: none;
+}
+
+.luxury-services::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -190px;
+  bottom: -170px;
+
+  border-radius: 50%;
+
+  background: rgba(209, 174, 145, 0.04);
+
+  filter: blur(25px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   MAIN WRAPPER
+========================================================= */
+
+.luxury-services-wrap {
+  position: relative;
+  z-index: 2;
+
+  width: min(1280px, calc(100% - 60px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.luxury-services-heading {
+  text-align: center;
+
+  margin-bottom: 40px;
+
+  animation:
+    servicesHeadingIn
+    0.85s
+    ease
+    both;
+}
+
+@keyframes servicesHeadingIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.luxury-services-eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #a16d54;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.luxury-services-heading h2 {
+  margin: 0;
+
+  color: #2d2722;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 40px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.7px;
+}
+
+.luxury-services-heading h2 span {
+  color: #9b6952;
+}
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.luxury-heading-line {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 16px;
+}
+
+.luxury-heading-line span {
+  width: 32px;
+  height: 1px;
+
+  background: #d8bca9;
+}
+
+.luxury-heading-line i {
+  width: 6px;
+  height: 6px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: #a16d54;
+
+  transform: rotate(45deg);
+}
+
+/* =========================================================
+   SERVICES GRID
+   DESKTOP = 6 CARDS IN ONE CENTERED ROW
+========================================================= */
+
+.luxury-services-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 16px;
+
+  justify-content: center;
+
+  align-items: stretch;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.luxury-service-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 12px 10px 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  text-align: center;
+
+  border: 1px solid #eee3da;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(250, 246, 242, 0.88)
+    );
+
+  box-shadow:
+    0 6px 22px rgba(57, 40, 30, 0.045);
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  animation:
+    serviceCardIn
+    0.7s
+    cubic-bezier(.2, .7, .2, 1)
+    var(--service-delay)
+    forwards;
+
+  transition:
+    transform 0.4s cubic-bezier(.2, .7, .2, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+@keyframes serviceCardIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* =========================================================
+   CARD SHINE
+========================================================= */
+
+.luxury-service-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.65),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.7s ease;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+.luxury-service-card:hover::before {
+  left: 140%;
+}
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.luxury-service-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #d9bba7;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #faf3ed
+    );
+
+  box-shadow:
+    0 18px 38px rgba(64, 44, 34, 0.11);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.luxury-service-number {
+  position: absolute;
+
+  top: 8px;
+  right: 9px;
+
+  z-index: 4;
+
+  color: #d2bdae;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
+}
+
+/* =========================================================
+   SERVICE IMAGE
+========================================================= */
+
+.luxury-service-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 145px;
+
+  margin-bottom: 13px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #eee5de;
+}
+
+.luxury-service-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.7s cubic-bezier(.2, .7, .2, 1),
+    filter 0.5s ease;
+}
+
+.luxury-service-card:hover
+.luxury-service-image img {
+  transform: scale(1.07);
+
+  filter: saturate(1.04);
+}
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.luxury-service-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(30, 20, 15, 0.02),
+      rgba(30, 20, 15, 0.10)
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   SERVICE CONTENT
+========================================================= */
+
+.luxury-service-content {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: stretch;
+
+  flex: 1;
+}
+
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
+
+.luxury-service-card h3 {
+  margin: 0 0 6px;
+
+  color: #302923;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.luxury-service-card p {
+  margin: 0 0 10px;
+
+  color: #756b63;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-line-clamp: 2;
+
+  line-clamp: 2;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.luxury-service-price {
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  margin: auto 0 10px;
+}
+
+.luxury-service-price span {
+  color: #9a8c82;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+}
+
+.luxury-service-price strong {
+  color: #604536;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   BOOK NOW BUTTON
+========================================================= */
+
+.luxury-service-btn {
+  position: relative;
+
+  width: 100%;
+
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  border: 1px solid #e4d1c3;
+
+  border-radius: 6px;
+
+  background: #f7eee7;
+
+  color: #49372f;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.45px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.luxury-service-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 75%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.55),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.6s ease;
+}
+
+.luxury-service-btn:hover::before {
+  left: 140%;
+}
+
+.luxury-service-btn:hover {
+  background: #302923;
+
+  border-color: #302923;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 16px rgba(48, 41, 35, 0.13);
+}
+
+/* =========================================================
+   VIEW ALL SERVICES
+========================================================= */
+
+.luxury-services-cta {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 32px;
+}
+
+.luxury-view-services {
+  position: relative;
+
+  height: 38px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 25px;
+
+  border: 1px solid #b28a74;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #42342d;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    all 0.3s ease;
+}
+
+.luxury-view-services:hover {
+  background: #302923;
+
+  border-color: #302923;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 22px rgba(48, 41, 35, 0.14);
+}
+
+.luxury-view-services svg {
+  transition:
+    transform 0.3s ease;
+}
+
+.luxury-view-services:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .luxury-services {
+    padding: 80px 0 85px;
+  }
+
+  .luxury-services-wrap {
+    width: min(1380px, calc(100% - 100px));
+  }
+
+  .luxury-services-heading h2 {
+    font-size: 42px;
+  }
+
+  .luxury-services-grid {
+    gap: 18px;
+  }
+
+  .luxury-service-card {
+    padding: 13px 11px 13px;
+  }
+
+  .luxury-service-image {
+    height: 165px;
+  }
+
+  .luxury-service-card h3 {
+    font-size: 14px;
+  }
+
+  .luxury-service-card p {
+    font-size: 9.5px;
+  }
+
+  .luxury-service-price strong {
+    font-size: 12px;
+  }
+
+  .luxury-service-btn {
+    height: 32px;
+
+    font-size: 8.5px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   3 + 3
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .luxury-services-wrap {
+    width: calc(100% - 40px);
+  }
+
+  .luxury-services-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+  .luxury-service-image {
+    height: 150px;
+  }
+}
+
+/* =========================================================
+   SMALL TABLET
+   2 + 2 + 2
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .luxury-services {
+    padding: 60px 0 65px;
+  }
+
+  .luxury-services-wrap {
+    width: calc(100% - 32px);
+  }
+
+  .luxury-services-heading h2 {
+    font-size: 34px;
+  }
+
+  .luxury-services-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .luxury-service-image {
+    height: 140px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .luxury-services {
+    padding: 52px 0 58px;
+  }
+
+  .luxury-services-wrap {
+    width: calc(100% - 24px);
+  }
+
+  .luxury-services-heading {
+    margin-bottom: 28px;
+  }
+
+  .luxury-services-eyebrow {
+    font-size: 8.5px;
+
+    letter-spacing: 1.9px;
+  }
+
+  .luxury-services-heading h2 {
+    font-size: 29px;
+
+    line-height: 1.2;
+  }
+
+  .luxury-heading-line {
+    margin-top: 13px;
+  }
+
+  .luxury-heading-line span {
+    width: 25px;
+  }
+
+  .luxury-services-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 9px;
+  }
+
+  .luxury-service-card {
+    padding: 9px 7px 9px;
+
+    border-radius: 9px;
+  }
+
+  .luxury-service-number {
+    top: 6px;
+
+    right: 7px;
+
+    font-size: 6px;
+  }
+
+  .luxury-service-image {
+    height: 105px;
+
+    margin-bottom: 9px;
+
+    border-radius: 7px;
+  }
+
+  .luxury-service-card h3 {
+    font-size: 10px;
+
+    margin-bottom: 5px;
+  }
+
+  .luxury-service-card p {
+    font-size: 7.5px;
+
+    line-height: 1.45;
+
+    margin-bottom: 8px;
+  }
+
+  .luxury-service-price {
+    margin-bottom: 8px;
+
+    gap: 4px;
+  }
+
+  .luxury-service-price span {
+    font-size: 6px;
+  }
+
+  .luxury-service-price strong {
+    font-size: 10px;
+  }
+
+  .luxury-service-btn {
+    height: 28px;
+
+    font-size: 7px;
+  }
+
+  .luxury-services-cta {
+    margin-top: 25px;
+  }
+
+  .luxury-view-services {
+    height: 36px;
+
+    padding: 0 21px;
+
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .luxury-services-wrap {
+    width: calc(100% - 18px);
+  }
+
+  .luxury-services-heading h2 {
+    font-size: 26px;
+  }
+
+  .luxury-services-grid {
+    gap: 7px;
+  }
+
+  .luxury-service-card {
+    padding: 8px 6px 8px;
+  }
+
+  .luxury-service-image {
+    height: 95px;
+  }
+
+  .luxury-service-card h3 {
+    font-size: 9.5px;
+  }
+
+  .luxury-service-card p {
+    font-size: 7px;
+  }
+
+  .luxury-service-price span {
+    font-size: 5.8px;
+  }
+
+  .luxury-service-price strong {
+    font-size: 9px;
+  }
+
+  .luxury-service-btn {
+    height: 27px;
+
+    font-size: 6.5px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .luxury-services-heading h2 {
+    font-size: 24px;
+  }
+
+  .luxury-services-grid {
+    gap: 6px;
+  }
+
+  .luxury-service-card {
+    padding: 7px 5px 7px;
+  }
+
+  .luxury-service-image {
+    height: 85px;
+  }
+
+  .luxury-service-card h3 {
+    font-size: 9px;
+  }
+
+  .luxury-service-card p {
+    font-size: 6.5px;
+  }
+
+  .luxury-service-btn {
+    height: 25px;
+
+    font-size: 6px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .luxury-services-heading,
+  .luxury-service-card {
+    animation: none;
+
+    opacity: 1;
+  }
+
+  .luxury-service-card,
+  .luxury-service-image img,
+  .luxury-service-btn,
+  .luxury-view-services {
+    transition: none;
+  }
+}

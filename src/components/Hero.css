@@ -1,0 +1,660 @@
+/* =========================================================
+   LUMIERE FULL WIDTH HERO
+========================================================= */
+
+.lumiere-hero {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  height: calc(100vh - 78px);
+  max-height: 850px;
+
+  overflow: hidden;
+  background: #f8f5f1;
+}
+
+
+/* =========================================================
+   FULL BACKGROUND IMAGE
+========================================================= */
+
+.lumiere-hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.lumiere-hero-bg-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.08);
+  opacity: 0;
+}
+
+.lumiere-hero.is-mounted .lumiere-hero-bg-image {
+  animation:
+    lumiereBackgroundIn 1.5s
+    cubic-bezier(0.16, 1, 0.3, 1)
+    forwards,
+    lumiereBackgroundDrift 10s
+    ease-in-out
+    1.5s
+    infinite
+    alternate;
+}
+
+@keyframes lumiereBackgroundIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes lumiereBackgroundDrift {
+  0% {
+    transform: scale(1.03) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: scale(1.07) translate3d(-1%, -0.5%, 0);
+  }
+}
+
+
+/* =========================================================
+   LUXURY OVERLAY
+========================================================= */
+
+.lumiere-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248, 245, 241, 0.98) 0%,
+      rgba(248, 245, 241, 0.94) 28%,
+      rgba(248, 245, 241, 0.72) 48%,
+      rgba(248, 245, 241, 0.30) 68%,
+      rgba(248, 245, 241, 0.08) 100%
+    );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.lumiere-hero-inner {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+
+  display: flex;
+  align-items: center;
+
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.lumiere-hero-content {
+  width: 58%;
+}
+
+.lumiere-hero-text {
+  width: 100%;
+
+  /* Desktop hero content slightly more left */
+  padding-left: clamp(
+    20px,
+    calc((100vw - 1400px) / 2),
+    45px
+  );
+
+  padding-right: 40px;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.lumiere-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.lumiere-hero.is-mounted .lumiere-reveal {
+  animation:
+    lumiereRise
+    0.9s
+    cubic-bezier(0.16, 1, 0.3, 1)
+    forwards;
+
+  animation-delay: var(--d, 0s);
+}
+
+@keyframes lumiereRise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.lumiere-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 18px;
+
+  color: #a56850;
+
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.lumiere-eyebrow-line {
+  width: 0;
+  height: 1px;
+
+  background: #a56850;
+}
+
+.lumiere-hero.is-mounted .lumiere-eyebrow-line {
+  animation:
+    lumiereLine
+    0.7s
+    cubic-bezier(0.16, 1, 0.3, 1)
+    forwards;
+
+  animation-delay: 0.15s;
+}
+
+@keyframes lumiereLine {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 32px;
+  }
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.lumiere-hero h1 {
+  margin: 0;
+
+  color: #29231f;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(52px, 6vw, 82px);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+}
+
+.lumiere-line {
+  display: inline-block;
+}
+
+.lumiere-accent {
+  color: #a86e56;
+  position: relative;
+}
+
+.lumiere-accent::after {
+  content: "";
+
+  position: absolute;
+
+  left: 1px;
+  bottom: 1px;
+
+  width: 0;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d7a044,
+      rgba(215, 160, 68, 0)
+    );
+}
+
+.lumiere-hero.is-mounted .lumiere-accent::after {
+  animation:
+    lumiereSweep
+    1s
+    cubic-bezier(0.16, 1, 0.3, 1)
+    forwards;
+
+  animation-delay: 0.9s;
+}
+
+@keyframes lumiereSweep {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 92%;
+  }
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.lumiere-hero-text > p {
+  margin: 25px 0 28px;
+
+  max-width: 500px;
+
+  color: #625a54;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.lumiere-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 30px;
+}
+
+.lumiere-btn {
+  position: relative;
+
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 21px;
+
+  border-radius: 7px;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.lumiere-btn:hover {
+  transform: translateY(-3px);
+}
+
+.lumiere-btn-primary {
+  border: 1px solid #302923;
+
+  background: #302923;
+  color: #fff;
+
+  box-shadow:
+    0 12px 30px
+    rgba(48, 41, 35, 0.20);
+}
+
+.lumiere-btn-primary:hover {
+  background: #a2745d;
+  border-color: #a2745d;
+}
+
+.lumiere-btn-secondary {
+  min-width: 170px;
+
+  border: 1px solid #ae8a76;
+
+  background: rgba(255, 255, 255, 0.45);
+
+  color: #302923;
+
+  backdrop-filter: blur(8px);
+}
+
+.lumiere-btn-secondary:hover {
+  background: #fff;
+  border-color: #302923;
+}
+
+.lumiere-btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.lumiere-btn:hover .lumiere-btn-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.lumiere-client-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lumiere-avatar-group {
+  display: flex;
+}
+
+.lumiere-avatar-group img {
+  width: 36px;
+  height: 36px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 2px solid #f8f5f1;
+
+  margin-left: -8px;
+
+  background: #ddd;
+
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.lumiere-avatar-group img:first-child {
+  margin-left: 0;
+}
+
+.lumiere-hero.is-mounted
+.lumiere-avatar-group img {
+  animation:
+    lumierePop
+    0.5s
+    cubic-bezier(0.34, 1.56, 0.64, 1)
+    forwards;
+
+  animation-delay:
+    calc(0.85s + (var(--i, 0) * 0.08s));
+}
+
+@keyframes lumierePop {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lumiere-rating-content strong {
+  display: block;
+
+  color: #302923;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+}
+
+.lumiere-rating-row {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 3px;
+
+  font-size: 11px;
+}
+
+.hero-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.hero-star {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.lumiere-hero.is-mounted .hero-star {
+  animation:
+    lumiereStar
+    0.45s
+    cubic-bezier(0.34, 1.56, 0.64, 1)
+    forwards;
+
+  animation-delay: var(--star-delay);
+}
+
+@keyframes lumiereStar {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lumiere-rating-row small {
+  color: #77706a;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .lumiere-hero {
+    min-height: 720px;
+    height: auto;
+    max-height: none;
+  }
+
+  .lumiere-hero-background {
+    position: absolute;
+  }
+
+  .lumiere-hero-bg-image {
+    object-position: center;
+  }
+
+  /* Mobile par image slightly darker */
+  .lumiere-hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(248, 245, 241, 0.97) 0%,
+        rgba(248, 245, 241, 0.92) 38%,
+        rgba(248, 245, 241, 0.50) 62%,
+        rgba(248, 245, 241, 0.12) 100%
+      );
+  }
+
+  .lumiere-hero-inner {
+    min-height: 720px;
+
+    align-items: flex-start;
+  }
+
+  .lumiere-hero-content {
+    width: 100%;
+  }
+
+  .lumiere-hero-text {
+    padding:
+      70px
+      22px
+      50px;
+  }
+
+  .lumiere-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.4px;
+  }
+
+  .lumiere-hero h1 {
+    font-size: clamp(45px, 13vw, 62px);
+
+    letter-spacing: -1.8px;
+  }
+
+  .lumiere-hero-text > p {
+    font-size: 13px;
+    line-height: 1.7;
+
+    max-width: 420px;
+  }
+
+  .lumiere-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+
+    max-width: 360px;
+  }
+
+  .lumiere-btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .lumiere-client-rating {
+    margin-top: 5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .lumiere-hero {
+    min-height: 680px;
+  }
+
+  .lumiere-hero-inner {
+    min-height: 680px;
+  }
+
+  .lumiere-hero-text {
+    padding:
+      55px
+      18px
+      40px;
+  }
+
+  .lumiere-hero h1 {
+    font-size: 44px;
+    line-height: 1;
+  }
+
+  .lumiere-hero-text > p {
+    font-size: 12.5px;
+  }
+
+  .lumiere-hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(248, 245, 241, 0.98) 0%,
+        rgba(248, 245, 241, 0.94) 40%,
+        rgba(248, 245, 241, 0.55) 70%,
+        rgba(248, 245, 241, 0.15) 100%
+      );
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .lumiere-hero-bg-image,
+  .lumiere-reveal,
+  .lumiere-avatar-group img,
+  .hero-star {
+    animation: none !important;
+
+    opacity: 1 !important;
+
+    transform: none !important;
+  }
+
+  .lumiere-accent::after {
+    width: 92% !important;
+  }
+}

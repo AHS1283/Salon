@@ -286,7 +286,7 @@ export default function Booking() {
 
           <div className="contact-top">
             <span className="contact-label">
-              STYLETTE FAMILY SALON
+              THE HAIR SPACE
             </span>
 
             <h3>
@@ -318,7 +318,7 @@ export default function Booking() {
             </a>
 
             <a
-              href="mailto:info@stylettefamilysalon.com"
+              href="mailto:info@thehairspacesalon.com"
               className="contact-line"
             >
               <span className="contact-icon">
@@ -327,7 +327,7 @@ export default function Booking() {
 
               <span>
                 <small>EMAIL US</small>
-                info@stylettefamilysalon.com
+                info@thehairspacesalon.com
               </span>
             </a>
 
@@ -338,9 +338,9 @@ export default function Booking() {
 
               <span>
                 <small>VISIT US</small>
-                123, Main Street,
+                Wakad,
                 <br />
-                Mumbai - 400050
+                Pune - 411057
               </span>
             </div>
 

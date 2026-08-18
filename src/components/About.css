@@ -6,11 +6,10 @@
 .about-section {
   position: relative;
   width: 100%;
-
   background: #ffffff;
-
   overflow: hidden;
 }
+
 
 /* =========================================================
    MAIN CONTAINER
@@ -18,11 +17,8 @@
 
 .about-container {
   width: min(1320px, calc(100% - 70px));
-
   min-height: 390px;
-
   margin: 0 auto;
-
   padding: 55px 0;
 
   display: grid;
@@ -39,9 +35,9 @@
     33%;
 
   gap: 28px;
-
   align-items: center;
 }
+
 
 /* =========================================================
    IMAGE
@@ -57,7 +53,7 @@
 
   border-radius: 18px;
 
-  background: #eee;
+  background: #f4f1ee;
 
   box-shadow:
     0 22px 55px rgba(45, 35, 28, 0.13);
@@ -69,24 +65,36 @@
     both;
 }
 
+
+/* IMAGE ITSELF */
+
 .about-image-wrapper img {
   display: block;
 
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  /*
+    Cover keeps the complete area filled.
+    Object position keeps the center of the
+    uploaded salon image visible.
+  */
 
-  object-position: center;
+  object-fit: contain;
+  object-position: center center;
 
   transition:
     transform 1s cubic-bezier(.2,.7,.2,1),
     filter 0.6s ease;
 }
 
+
+/* IMAGE HOVER */
+
 .about-image-wrapper:hover img {
-  transform: scale(1.055);
+  transform: scale(1.035);
 }
+
 
 /* =========================================================
    IMAGE OVERLAY
@@ -102,12 +110,13 @@
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.04),
-      rgba(0,0,0,0.08)
+      rgba(255,255,255,0.03),
+      rgba(0,0,0,0.06)
     );
 
-  opacity: 0.5;
+  opacity: 0.45;
 }
+
 
 /* =========================================================
    IMAGE ANIMATION
@@ -130,6 +139,7 @@
   }
 }
 
+
 /* =========================================================
    CONTENT
 ========================================================= */
@@ -149,6 +159,7 @@
     both;
 }
 
+
 @keyframes aboutContentReveal {
 
   from {
@@ -165,6 +176,7 @@
       translateY(0);
   }
 }
+
 
 /* =========================================================
    EYEBROW
@@ -191,6 +203,7 @@
   line-height: 1;
 }
 
+
 /* =========================================================
    HEADING
 ========================================================= */
@@ -214,6 +227,7 @@
   letter-spacing: -0.8px;
 }
 
+
 /* =========================================================
    DESCRIPTION
 ========================================================= */
@@ -236,6 +250,7 @@
 
   line-height: 1.7;
 }
+
 
 /* =========================================================
    LEARN MORE BUTTON
@@ -282,6 +297,7 @@
     border-color 0.3s ease;
 }
 
+
 .about-learn-btn:hover {
   background: #302923;
 
@@ -293,11 +309,13 @@
     translateY(-2px);
 }
 
+
 .about-learn-btn:active {
   transform:
     translateY(0)
     scale(0.98);
 }
+
 
 /* =========================================================
    FEATURES
@@ -317,11 +335,6 @@
 
   border-left: 1px solid #eee5dd;
 
-  /*
-    Moves the whole right block
-    slightly toward the left.
-  */
-
   margin-left: -8px;
 
   animation:
@@ -331,6 +344,7 @@
     0.3s
     both;
 }
+
 
 /* =========================================================
    FEATURES ANIMATION
@@ -352,6 +366,7 @@
       translateX(0);
   }
 }
+
 
 /* =========================================================
    FEATURE CARD
@@ -379,10 +394,12 @@
     background 0.35s ease;
 }
 
+
 .about-feature:hover {
   transform:
     translateY(-4px);
 }
+
 
 /* =========================================================
    VERTICAL SEPARATOR
@@ -404,6 +421,7 @@
   background: #eee5dd;
 }
 
+
 /* =========================================================
    HORIZONTAL SEPARATOR
 ========================================================= */
@@ -423,6 +441,7 @@
 
   background: #eee5dd;
 }
+
 
 /* =========================================================
    FEATURE ICON
@@ -453,6 +472,7 @@
     color 0.35s ease;
 }
 
+
 .about-feature:hover .about-feature-icon {
   transform:
     scale(1.08)
@@ -462,6 +482,7 @@
 
   color: #8f604b;
 }
+
 
 /* =========================================================
    FEATURE TITLE
@@ -484,6 +505,7 @@
   line-height: 1.4;
 }
 
+
 /* =========================================================
    FEATURE DESCRIPTION
 ========================================================= */
@@ -504,6 +526,7 @@
 
   line-height: 1.6;
 }
+
 
 /* =========================================================
    LARGE DESKTOP
@@ -530,21 +553,31 @@
     gap: 30px;
   }
 
+
   .about-image-wrapper {
     height: 340px;
   }
+
+
+  .about-image-wrapper img {
+    object-position: center center;
+  }
+
 
   .about-content {
     max-width: 280px;
   }
 
+
   .about-content h2 {
     font-size: 39px;
   }
 
+
   .about-content p {
     font-size: 11.5px;
   }
+
 
   .about-features {
     min-height: 290px;
@@ -552,20 +585,24 @@
     margin-left: -10px;
   }
 
+
   .about-feature-icon {
     width: 56px;
 
     height: 56px;
   }
 
+
   .about-feature h3 {
     font-size: 10.5px;
   }
+
 
   .about-feature p {
     font-size: 10px;
   }
 }
+
 
 /* =========================================================
    TABLET
@@ -587,21 +624,31 @@
     padding: 45px 0;
   }
 
+
   .about-image-wrapper {
     height: 280px;
   }
+
+
+  .about-image-wrapper img {
+    object-position: center center;
+  }
+
 
   .about-content {
     max-width: 250px;
   }
 
+
   .about-content h2 {
     font-size: 30px;
   }
 
+
   .about-content p {
     font-size: 10px;
   }
+
 
   .about-features {
     min-height: 250px;
@@ -609,10 +656,12 @@
     margin-left: 0;
   }
 
+
   .about-feature {
     padding:
       15px 8px;
   }
+
 
   .about-feature-icon {
     width: 46px;
@@ -620,14 +669,17 @@
     height: 46px;
   }
 
+
   .about-feature h3 {
     font-size: 9px;
   }
+
 
   .about-feature p {
     font-size: 9px;
   }
 }
+
 
 /* =========================================================
    MOBILE
@@ -650,15 +702,37 @@
     padding: 38px 0;
   }
 
+
   /* IMAGE */
 
   .about-image-wrapper {
     width: 100%;
 
-    height: 290px;
+    /*
+      Responsive image height.
+      Prevents the image from becoming too short.
+    */
+
+    height: clamp(
+      260px,
+      60vw,
+      360px
+    );
 
     border-radius: 16px;
   }
+
+
+  .about-image-wrapper img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
 
   /* CONTENT */
 
@@ -671,11 +745,13 @@
       0 4px;
   }
 
+
   .about-eyebrow {
     font-size: 8px;
 
     margin-bottom: 8px;
   }
+
 
   .about-content h2 {
     font-size: 32px;
@@ -684,6 +760,7 @@
 
     margin-bottom: 12px;
   }
+
 
   .about-content p {
     max-width: 330px;
@@ -695,6 +772,7 @@
     margin-bottom: 15px;
   }
 
+
   .about-learn-btn {
     height: 35px;
 
@@ -703,6 +781,7 @@
 
     font-size: 8px;
   }
+
 
   /* FEATURES */
 
@@ -724,6 +803,7 @@
       1px solid #eee5dd;
   }
 
+
   .about-feature {
     min-height: 150px;
 
@@ -731,13 +811,16 @@
       20px 10px;
   }
 
+
   .about-feature:nth-child(even)::before {
     display: block;
   }
 
+
   .about-feature:nth-child(n + 3)::after {
     display: block;
   }
+
 
   .about-feature-icon {
     width: 50px;
@@ -747,11 +830,13 @@
     margin-bottom: 10px;
   }
 
+
   .about-feature h3 {
     font-size: 10px;
 
     margin-bottom: 6px;
   }
+
 
   .about-feature p {
     max-width: 125px;
@@ -761,6 +846,7 @@
     line-height: 1.6;
   }
 }
+
 
 /* =========================================================
    SMALL MOBILE
@@ -777,19 +863,33 @@
     padding: 30px 0;
   }
 
+
   .about-image-wrapper {
-    height: 245px;
+    /*
+      Slightly taller on small phones so
+      the uploaded image remains visually strong.
+    */
+
+    height: 250px;
 
     border-radius: 14px;
   }
+
+
+  .about-image-wrapper img {
+    object-position: center center;
+  }
+
 
   .about-content h2 {
     font-size: 29px;
   }
 
+
   .about-content p {
     font-size: 10px;
   }
+
 
   .about-feature {
     min-height: 145px;
@@ -798,20 +898,24 @@
       17px 6px;
   }
 
+
   .about-feature-icon {
     width: 46px;
 
     height: 46px;
   }
 
+
   .about-feature h3 {
     font-size: 9px;
   }
+
 
   .about-feature p {
     font-size: 9px;
   }
 }
+
 
 /* =========================================================
    EXTRA SMALL DEVICES
@@ -827,13 +931,16 @@
       25px 0;
   }
 
+
   .about-image-wrapper {
     height: 220px;
   }
 
+
   .about-content h2 {
     font-size: 27px;
   }
+
 
   .about-feature {
     min-height: 140px;
@@ -842,20 +949,24 @@
       14px 5px;
   }
 
+
   .about-feature-icon {
     width: 43px;
 
     height: 43px;
   }
 
+
   .about-feature h3 {
     font-size: 8.5px;
   }
+
 
   .about-feature p {
     font-size: 8.5px;
   }
 }
+
 
 /* =========================================================
    REDUCED MOTION
@@ -868,6 +979,7 @@
   .about-features {
     animation: none;
   }
+
 
   .about-image-wrapper img,
   .about-feature,

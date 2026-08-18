@@ -122,7 +122,7 @@ export default function Footer() {
           <div className="footer-about">
 
             <div className="footer-logo">
-              STYLETTE FAMILY SALON
+              THE HAIR SPACE
             </div>
 
             <p>
@@ -244,10 +244,10 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="mailto:info@stylettefamilysalon.com"
+                  href="mailto:info@thehairspace.com"
                   className="footer-contact-link"
                 >
-                  info@stylettefamilysalon.com
+                  info@thehairspace.com
                 </a>
               </li>
 
@@ -263,9 +263,9 @@ export default function Footer() {
                     )
                   }
                 >
-                  123, Main Street,
+                  123, WAKAD,
                   <br />
-                  Mumbai - 400050
+                  Pune - 4411057
                 </button>
               </li>
 
@@ -319,7 +319,7 @@ export default function Footer() {
         <div className="footer-bottom">
 
           <span>
-            © 2026 Stylette Family Salon.
+            © 2026  THE HAIR SPACE.
             All rights reserved.
           </span>
 

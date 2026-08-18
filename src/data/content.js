@@ -39,20 +39,23 @@ export const GALLERY_TABS = [
 
 export const SERVICES = [
   {
-    img: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkVT4S_LKBz_cvv20kzBFgU_uNircGKFE6CaJFicDThFiNzgK8N2WbR42pTm3nnXLKvN8k8NgGzMhpmsaiOxrl-A4MlW_ST83VueX1TIvpyETLvbZcHvZnIDC6-sq9Uf0sp3yQHScf4kkoP=s680-w680-h510-rw",
+    id: "service-1",
+    img: "https://plain-apac-prod-public.komododecks.com/202608/18/nNHmBX07AhKytkKpFnWz/image.webp",
     title: "Hair Cut & Style",
     desc: "Trendy cuts & styling for everyone",
     price: "₹599",
   },
 
   {
-    img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=85",
+    id: "service-2",
+    img: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnsCwLm1bK122c0-G5CdYGHTb_gljI_QexJ5G73AwapJheBThcFk32W2rVEVtayYplg2FIK-75OifGbgW1DytUDs3HmE_qI3trAO7RJcLKVWilTG7VGknUFM99H2gQBWJmaOQTDRhU5S_Xk=s680-w680-h510-rw",
     title: "Hair Color",
     desc: "Color, highlights & ombre",
     price: "₹1499",
   },
 
   {
+    id: "service-3",
     img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=85",
     title: "Skin & Facial",
     desc: "Facials & skin treatments",
@@ -60,6 +63,7 @@ export const SERVICES = [
   },
 
   {
+    id: "service-4",
     img: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=85",
     title: "Beard & Grooming",
     desc: "Beard trim, shaping & care",
@@ -67,6 +71,7 @@ export const SERVICES = [
   },
 
   {
+    id: "service-5",
     img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=85",
     title: "Manicure & Pedicure",
     desc: "Nail care, polish & foot spa",
@@ -74,6 +79,7 @@ export const SERVICES = [
   },
 
   {
+    id: "service-6",
     img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=85",
     title: "Spa & Relaxation",
     desc: "Massage, spa & relaxation",
@@ -81,6 +87,7 @@ export const SERVICES = [
   },
 
   {
+    id: "service-7",
     img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=85",
     title: "Bridal & Party",
     desc: "Bridal makeup & party looks",
@@ -157,36 +164,43 @@ export const ABOUT_ITEMS = [
 
 export const GALLERY = [
   {
+    id: "gallery-1",
     cat: "Interior",
     img: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=500&q=80",
   },
 
   {
+    id: "gallery-2",
     cat: "Grooming",
     img: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500&q=80",
   },
 
   {
+    id: "gallery-3",
     cat: "Hair",
     img: "https://images.unsplash.com/photo-1595475207225-428b62bda831?w=500&q=80",
   },
 
   {
+    id: "gallery-4",
     cat: "Skin",
     img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=500&q=80",
   },
 
   {
+    id: "gallery-5",
     cat: "Nails",
     img: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&q=80",
   },
 
   {
+    id: "gallery-6",
     cat: "Grooming",
     img: "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=500&q=80",
   },
 
   {
+    id: "gallery-7",
     cat: "Interior",
     img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&q=80",
   },
@@ -199,30 +213,32 @@ export const GALLERY = [
 
 export const TEAM = [
   {
+    id: "team-1",
     name: "Alex Morgan",
     role: "Senior Stylist",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
   },
 
   {
+    id: "team-2",
     name: "Neha Sharma",
     role: "Skin Expert",
     img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80",
   },
 
   {
+    id: "team-3",
     name: "Rahul Verma",
     role: "Beard Specialist",
     img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
   },
 
   {
+    id: "team-4",
     name: "Priya Patel",
     role: "Nail Artist",
     img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
   },
-
- 
 ];
 
 
@@ -232,18 +248,21 @@ export const TEAM = [
 
 export const TESTIMONIALS = [
   {
+    id: "testimonial-1",
     name: "Karan Malhotra",
     text: "Amazing experience! The staff is super professional and friendly. I loved the haircut and the overall vibe.",
     img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
   },
 
   {
+    id: "testimonial-2",
     name: "Ananya Reddy",
     text: "Best salon for both men and women. Very hygienic and the results are always fantastic.",
     img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&q=80",
   },
 
   {
+    id: "testimonial-3",
     name: "Rohit Singh",
     text: "Great service, premium products and highly skilled team. Highly recommend!",
     img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
@@ -274,7 +293,7 @@ export const LOCATIONS = [
   //   city: "Mumbai",
   //   area: "Bandra West",
   //   description:
-  //     "Our signature Stylette Family Salon space in the heart of Bandra.",
+  //     "Our signature The Hair Space space in the heart of Bandra.",
   //   image:
   //     "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85",
   //   map:
@@ -284,13 +303,13 @@ export const LOCATIONS = [
    {
     number: "01",
     city: "Pune",
-    area: "Pimpri-Chinchwad",
+    area: "Wakad,Pimpri-Chinchwad",
     description:
       "A calm, intimate salon experience in Pimpri-Chinchwad.",
     image:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkKP4JrJokRj6Wp44xVfKnT8w_dML3kw0aTouyrEPNZFw5lhc_CW86IoVWTEjlS9nBLCXfPdqMPxdi3OHIKWoYrShLo8abK-YSLIlhDngRmlfHNVgq0ZMgnG7GDV2ibd8BLtGIlLQ=s680-w680-h510-rw",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnv-hPtJn6k-AIiZ2FNGQuqrbJvUasXi4IAm7jz78caiWanCulpaiD7-mYJu8-0bNFOkLr2ySvIFgAuOmnrITFKSf9-N5LyBADvFznK72v9JitvnIz2xH2JclDoFaucyE1UeEsRc486fqzX=s680-w680-h510-rw",
     map:
-      "https://www.google.com/maps/search/?api=1&query=Stylette+Family+Salon+Pimple+Nilakh+Pune",
+      "https://www.google.com/maps/search/?api=1&query=The+Hair+Space+Pimple+Nilakh+Pune",
   },
 
   // {
@@ -298,7 +317,7 @@ export const LOCATIONS = [
   //   city: "Nashik",
   //   area: "College Road",
   //   description:
-  //     "Modern beauty, thoughtful service and Stylette Family Salon warmth.",
+  //     "Modern beauty, thoughtful service and THE HAIR SPACE warmth.",
   //   image:
   //     "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85",
   //   map:
@@ -317,7 +336,7 @@ export const DUMMY_WORKS = [
     category: "Hair",
     title: "Signature Hair",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkMF4YFfEtrCZZpn2jBLxyDZLUxT6cV3x69Ov5r__6zFXxg3V-rEydbQ3C-OY-haL1WPkDEGHYnFHUAffh_R2DlEQiFBV5Lo7GVgMAqAPOXJWfWTXfjGRGGulOsSw73y4_lzic=s680-w680-h510-rw",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnXrSUqZLlyWcSDZSpI2RLjgwFz_TzcqE2Onv-_M7D8wGxQMSGH_P_O-kyrfKwDr4JhIaYrUzFpRuyjP7lXVrPo4elpEA-1qiLpCSLetKj8dFfia5_Q8cFv5zlW1EiN7z0rK1vbLgFO39Am=s680-w680-h510-rw",
   },
 
   {
@@ -325,7 +344,7 @@ export const DUMMY_WORKS = [
     category: "Hair",
     title: "Luxury Styling",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkP0mmKGh2kZxWUia0pGgfZaDJzqE79S0cH-M3X7VyLSoMCOBS_BzdIxzgvltVPnZ-2mwufkLqFux_P6hF3jFqnJstiuWGBO86xbQAVUI89fqtDJW0D9ktFPc6fK1zoH-Sti10D=s680-w680-h510-rw",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm0Jw7GEuxEE1fl06Qp_9HOg6vhjYVh2z03OLWIX_la9_7jIPUGzC8KLTOcbT32C9GIlTT0fqVirdMLJR2ilFLaZfQcbOucGSzjm2R49rIB4ZrlUXubGiyxQJcWlR2k47cLZkGyBLIt5IWj=s680-w680-h510-rw",
   },
 
   {
@@ -333,7 +352,7 @@ export const DUMMY_WORKS = [
     category: "Skin",
     title: "Facial Care",
     imageUrl:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85",
+    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkg4oQAYbYeMRhbdYrDNcD4No6W0a6EjwhbSB9MqKQY3Gb8nc2Gest9zCJ546pLmTfqXZv2Eu2HNx4nyA1vl3HvyoqZE8uFZHPcKvW50Lv2htNB6Z0yCLvdI18bppEx5hs2LdlzD1kc9OI_=s680-w680-h510-rw",
   },
 
   {
@@ -341,7 +360,7 @@ export const DUMMY_WORKS = [
     category: "Grooming",
     title: "Men's Grooming",
     imageUrl:
-      "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl1lAqqiEvMvSRDyA3htIKNtw1zCeS0Gk1OQ0ThcGBgAM_55PNZw5YmWtJtUbPbjYNRj7YO2bB58o9OnZgunJUDGE0A_Zb02hXxOu-UCoGNtHhvwfcWcOvyaGqEi8n09c8BG-Mje9gvurbr=s680-w680-h510-rw"
   },
 
   {
@@ -349,7 +368,7 @@ export const DUMMY_WORKS = [
     category: "Beauty",
     title: "Soft Glam",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnTo1N3pvbhaBsugmB7tgypTtScds2PTfLZ_T_owfHvR-viI0MueJ3bsHCUe4km4sCrmFxWqA3P9I0nsSz36milDnTgH1ic4-oOS-SA9g5FnqN_GysPHVy_ZeotTlC-eJErnshOU2HD51tF=s680-w680-h510-rw",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkFsP3U4fPf5W9GamlPO5VaQpCCPN3yyxX_VKcpanhSDTRMxUJCdfh67RdEQ0oAZx5wVuCplTp6_HBjkjUdgcnzq9gzNkn8VqCVCREyvcbxQOlFpzNxbAHW8KlZxAtnmkkgW7gqK-gQOo84=s680-w680-h510-rw"
   },
 
   {
@@ -365,17 +384,16 @@ export const DUMMY_WORKS = [
     category: "Spa",
     title: "Relaxing Spa",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl2bnXI6XhCwFzzE_F8Y4V_rO4qIIQhng9r00t29kVJ-mfP_QfsWNAR5bXUUsXDuG8Vo-0S-XnvbI3994RQQ-vfKKnBK6YVZopcjyc36ZbHdx-xjuZEvaDM_S2xHpLYvsoDX4Yeok5IVDQW=s680-w680-h510-rw",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkFsP3U4fPf5W9GamlPO5VaQpCCPN3yyxX_VKcpanhSDTRMxUJCdfh67RdEQ0oAZx5wVuCplTp6_HBjkjUdgcnzq9gzNkn8VqCVCREyvcbxQOlFpzNxbAHW8KlZxAtnmkkgW7gqK-gQOo84=s680-w680-h510-rw",
   },
-
   {
     id: "dummy-8",
     category: "Interior",
     title: "Salon Interior",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnpv69fuv8YNXNcn6EeQyijqoyh83Jwx0MYxLlSq12Z1HpVQigOblEpWMhfQboW_3VxH4dqk5xzzBDOAOnz2Ahfpbl9XMLiHtIK5-xPExXXgOt1Mzw6aV5tBlR-VbajPNxU4tPg=s680-w680-h510-rw",
-  },
-];
+     "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnBSI3Pffq7uafyAfVFTBd9umid73fC8aAboj_5SNqWPbuGGbTzyqs88NXteUr0bLmH2mC6hF73sOzvH8WWMx3wfQP12E7g4U9wT1W1m1w8v4NRVJCfz3ucIxK5OA61b5rdN9J2ww=s680-w680-h510-rw",
+
+  }  ];
 
 
 /* =========================================================
@@ -411,7 +429,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-1-preview.mp4",
+    previewVideoUrl: "/videos/reel-1.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -425,7 +443,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-2-preview.mp4",
+    previewVideoUrl: "/videos/reel-2.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -439,7 +457,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-3-preview.mp4",
+    previewVideoUrl: "/videos/reel-3.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -453,7 +471,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-4-preview.mp4",
+    previewVideoUrl: "/videos/reel-4.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -467,7 +485,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-5-preview.mp4",
+    previewVideoUrl: "/videos/reel-6.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -475,13 +493,13 @@ export const REELS = [
 
   {
     id: "reel-6",
-    title: "Stylette Family Salon Ambience",
+    title: "The Hair Space Ambience",
     category: "AMBIENCE",
 
     thumbnailUrl:
       "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-6-preview.mp4",
+    previewVideoUrl: "/videos/reel-5.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/DbvbJtONTzn/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",

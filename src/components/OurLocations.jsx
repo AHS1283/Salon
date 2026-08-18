@@ -29,7 +29,7 @@ export default function Locations() {
 
             <h2 className="ll-title">
               Find your
-              <span> Stylette Family Salon.</span>
+              <span> The Hair Space.</span>
             </h2>
 
           </div>
@@ -38,7 +38,7 @@ export default function Locations() {
           <div className="ll-header-right">
 
             <p className="ll-description">
-              Discover a Stylette Family Salon near you,
+              Discover a The Hair Space near you,
               each thoughtfully designed to offer
               the same signature experience.
             </p>
@@ -77,7 +77,7 @@ export default function Locations() {
               <img
                 className="ll-image"
                 src={location.image}
-                alt={`${location.city} Stylette Family Salon`}
+                alt={`${location.city} THE HAIR SPACE`}
                 loading="lazy"
               />
 
@@ -96,7 +96,7 @@ export default function Locations() {
                 </span>
 
                 <span className="ll-status">
-                  STYLETTE FAMILY SALON
+                  THE HAIR SPACE
                 </span>
 
               </div>

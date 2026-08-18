@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, Menu, X, Sparkles } from "lucide-react";
 import { NAV_LINKS } from "../data/content.js";
+import logo from "../assets/logo.jpg";
 import "../Styles/Header.css";
 
 const ID_OVERRIDES = {
@@ -83,25 +84,30 @@ export default function Header() {
       <div className="header-wrap">
 
         {/* =====================================
-            LOGO
+            LEFT SIDE — LOGO
         ====================================== */}
 
         <button
           className="luxury-logo"
           onClick={(e) => handleNavClick(e, "Home")}
-          aria-label="Lumière Salon & Spa Home"
+          aria-label="Stylette Family Salon Home"
         >
-          <span className="logo-star">✦</span>
+          <img
+            className="logo-image"
+            src={logo}
+            alt="Stylette Family Salon Logo"
+          />
 
-          <span className="logo-main">
-            The Hair Villa
-          </span>
+          <span className="logo-text-group">
+            <span className="logo-main">
+              Stylette Family Salon
+            </span>
 
-          <span className="logo-sub">
-            Hair • Beauty • Confidence
+            <span className="logo-sub">
+              Hair • Beauty • Confidence
+            </span>
           </span>
         </button>
-
 
         {/* =====================================
             DESKTOP NAVIGATION
@@ -115,15 +121,12 @@ export default function Header() {
             <a
               key={link}
               href={`#${toId(link)}`}
-              onClick={(e) =>
-                handleNavClick(e, link)
-              }
+              onClick={(e) => handleNavClick(e, link)}
             >
               {link}
             </a>
           ))}
         </nav>
-
 
         {/* =====================================
             HEADER ACTIONS
@@ -148,7 +151,6 @@ export default function Header() {
               size={13}
             />
           </button>
-
 
           {/* Mobile hamburger */}
 
@@ -176,7 +178,6 @@ export default function Header() {
         </div>
       </div>
 
-
       {/* =====================================
           MOBILE MENU
       ====================================== */}
@@ -188,7 +189,6 @@ export default function Header() {
             : ""
         }`}
       >
-
         <nav
           className="mobile-nav"
           aria-label="Mobile navigation"
@@ -216,7 +216,6 @@ export default function Header() {
             </a>
           ))}
 
-
           {/* Booking inside hamburger menu */}
 
           <button
@@ -234,19 +233,17 @@ export default function Header() {
 
         </nav>
 
-
         {/* Mobile footer */}
 
         <div className="mobile-menu-footer">
           <span>
-            LUMIÈRE SALON &amp; SPA
+            STYLETTE FAMILY SALON
           </span>
 
           <span>
-            BEAUTY • CARE • CONFIDENCE
+            HAIR • BEAUTY • CONFIDENCE
           </span>
         </div>
-
       </div>
     </header>
   );

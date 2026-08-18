@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, ArrowRight, Star } from "lucide-react";
 import { TEAM } from "../data/content.js";
-import salonHero from "../assets/salon.png";
+import salonHero from "../assets/hero_sytte.webp";
 import "./Hero.css";
 
 function Stars() {

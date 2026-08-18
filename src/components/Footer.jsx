@@ -122,7 +122,7 @@ export default function Footer() {
           <div className="footer-about">
 
             <div className="footer-logo">
-              LUMIÈRE
+              STYLETTE FAMILY SALON
             </div>
 
             <p>
@@ -244,10 +244,10 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="mailto:info@lumiere.com"
+                  href="mailto:info@stylettefamilysalon.com"
                   className="footer-contact-link"
                 >
-                  info@lumiere.com
+                  info@stylettefamilysalon.com
                 </a>
               </li>
 
@@ -319,7 +319,7 @@ export default function Footer() {
         <div className="footer-bottom">
 
           <span>
-            © 2026 Lumiere Salon &amp; Spa.
+            © 2026 Stylette Family Salon.
             All rights reserved.
           </span>
 

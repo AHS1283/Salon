@@ -286,7 +286,7 @@ export default function Booking() {
 
           <div className="contact-top">
             <span className="contact-label">
-              LUMIÈRE SALON & SPA
+              STYLETTE FAMILY SALON
             </span>
 
             <h3>
@@ -318,7 +318,7 @@ export default function Booking() {
             </a>
 
             <a
-              href="mailto:info@lumiere.com"
+              href="mailto:info@stylettefamilysalon.com"
               className="contact-line"
             >
               <span className="contact-icon">
@@ -327,7 +327,7 @@ export default function Booking() {
 
               <span>
                 <small>EMAIL US</small>
-                info@lumiere.com
+                info@stylettefamilysalon.com
               </span>
             </a>
 

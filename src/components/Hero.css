@@ -552,8 +552,14 @@
   }
 
   .lumiere-hero-text {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    /* Zyada top padding taaki content navbar ke neeche
+       comfortably start ho, bahut upar na chipke */
     padding:
-      70px
+      110px
       22px
       50px;
   }
@@ -577,15 +583,29 @@
   }
 
   .lumiere-hero-buttons {
+    width: 100%;
+
     flex-direction: column;
     align-items: stretch;
+
+    margin-left: 0;
+    margin-right: 0;
 
     max-width: 360px;
   }
 
   .lumiere-btn {
     width: 100%;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
     min-height: 48px;
+  }
+
+  .lumiere-btn-secondary {
+    min-width: 0;
   }
 
   .lumiere-client-rating {
@@ -610,7 +630,7 @@
 
   .lumiere-hero-text {
     padding:
-      55px
+      95px
       18px
       40px;
   }

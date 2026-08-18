@@ -133,7 +133,8 @@
 }
 
 /* =========================================================
-   GRID
+   GRID — 4 columns x 2 rows, 8 equal-size cards
+   (4 on the left, 4 on the right — same style, no big tile)
 ========================================================= */
 
 .lw-grid {
@@ -176,11 +177,6 @@
   transform: translateY(-4px);
   border-color: #d8c0ae;
   box-shadow: 0 15px 35px rgba(54, 38, 29, 0.09);
-}
-
-.lw-card-1 {
-  grid-column: span 2;
-  grid-row: span 2;
 }
 
 /* SKELETON (while fetching from Firestore) */
@@ -304,6 +300,7 @@
 
   .lw-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, 170px);
   }
 }
 
@@ -343,13 +340,8 @@
 
   .lw-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 155px 155px 155px;
+    grid-template-rows: repeat(4, 155px);
     gap: 9px;
-  }
-
-  .lw-card-1 {
-    grid-column: span 2;
-    grid-row: span 1;
   }
 
   .lw-card {
@@ -368,6 +360,6 @@
   }
 
   .lw-grid {
-    grid-template-rows: 145px 145px 145px;
+    grid-template-rows: repeat(4, 145px);
   }
 }

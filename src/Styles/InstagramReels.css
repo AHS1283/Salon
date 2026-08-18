@@ -23,24 +23,9 @@
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 8% 12%,
-      rgba(185, 145, 105, 0.1),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 92% 88%,
-      rgba(185, 145, 105, 0.08),
-      transparent 32%
-    ),
-    linear-gradient(
-      135deg,
-      #f8f4ef 0%,
-      #f5f0e9 50%,
-      #faf7f3 100%
-    );
-
-  color: #29231f;
+    radial-gradient(circle at 8% 15%, rgba(190, 147, 118, 0.07), transparent 28%),
+    radial-gradient(circle at 92% 85%, rgba(211, 177, 150, 0.06), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #fdfaf7 52%, #ffffff 100%);
 }
 
 
@@ -53,18 +38,18 @@
 
   position: absolute;
 
-  width: 380px;
-  height: 380px;
+  width: 520px;
+  height: 520px;
 
-  top: -230px;
-  left: -180px;
+  left: -310px;
+  top: 180px;
 
   border-radius: 50%;
 
   background:
-    rgba(190, 150, 110, 0.055);
+    rgba(179, 132, 101, 0.035);
 
-  filter: blur(75px);
+  filter: blur(30px);
 
   pointer-events: none;
 }
@@ -74,18 +59,18 @@
 
   position: absolute;
 
-  width: 420px;
-  height: 420px;
+  width: 450px;
+  height: 450px;
 
-  right: -230px;
-  bottom: -250px;
+  right: -260px;
+  bottom: 50px;
 
   border-radius: 50%;
 
   background:
-    rgba(190, 150, 110, 0.045);
+    rgba(204, 165, 137, 0.04);
 
-  filter: blur(80px);
+  filter: blur(28px);
 
   pointer-events: none;
 }
@@ -1572,4 +1557,158 @@
     transition-duration:
       0.01ms !important;
   }
+}
+/* =========================================================
+   INSTAGRAM EMBED
+========================================================= */
+
+.lr-instagram-embed {
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lr-instagram-embed > blockquote {
+  width: 100% !important;
+  max-width: 540px !important;
+  min-width: 280px !important;
+  margin: 0 auto !important;
+}
+
+.lr-instagram-embed iframe {
+  width: 100% !important;
+  max-width: 540px !important;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.lr-instagram-loading {
+  min-height: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #8a8177;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.lr-instagram-error {
+  min-height: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  color: #8a8177;
+  font-size: 13px;
+}
+
+.lr-instagram-error a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.lr-instagram-modal {
+  width: min(94vw, 620px);
+  max-height: 94vh;
+  overflow-y: auto;
+}
+
+.lr-modal-instagram-wrap {
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  background: #fff;
+}
+
+.lr-modal-instagram-embed {
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.lr-modal-instagram-embed > blockquote {
+  width: 100% !important;
+  max-width: 540px !important;
+  margin: 0 auto !important;
+}
+
+
+/* =========================================================
+   IMAGE FALLBACK
+========================================================= */
+
+.lr-image-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1eee9;
+  color: #8a8177;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .lr-instagram-embed {
+    min-height: 360px;
+  }
+
+  .lr-modal-instagram-wrap {
+    min-height: 360px;
+  }
+
+  .lr-modal-instagram-embed {
+    min-height: 360px;
+  }
+
+  .lr-instagram-loading {
+    min-height: 280px;
+  }
+
+  .lr-instagram-error {
+    min-height: 280px;
+  }
+
+  .lr-instagram-modal {
+    width: 94vw;
+    max-height: 92vh;
+    border-radius: 16px;
+  }
+
 }

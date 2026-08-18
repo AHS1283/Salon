@@ -56,7 +56,7 @@ export default function Team() {
 
             <div className="why-heading">
               <span className="why-eyebrow">
-                WHY LUMIÈRE
+                WHY STYLETTE FAMILY SALON
               </span>
 
               <h3>

@@ -1,5 +1,5 @@
 /* =========================================================
-   LUMIÈRE SALON & SPA
+   STYLETTE FAMILY SALON
    OUR LOCATIONS
    Compact Premium / Animated
    Matches current Locations.jsx
@@ -85,7 +85,7 @@
 
   font-family: "Poppins", sans-serif;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
 
   line-height: 1;
@@ -142,7 +142,7 @@
 
   font-family: "Poppins", sans-serif;
 
-  font-size: 10px;
+  font-size: 12px;
 
   font-weight: 400;
 
@@ -399,7 +399,7 @@
     Georgia,
     serif;
 
-  font-size: 11px;
+  font-size: 13px;
 
   font-style: italic;
 
@@ -440,7 +440,7 @@
     "Poppins",
     sans-serif;
 
-  font-size: 6px;
+  font-size: 8px;
 
   font-weight: 600;
 
@@ -487,7 +487,7 @@
     "Poppins",
     sans-serif;
 
-  font-size: 7px;
+  font-size: 9px;
 
   font-weight: 600;
 
@@ -545,7 +545,7 @@
     "Poppins",
     sans-serif;
 
-  font-size: 8.5px;
+  font-size: 10.5px;
 
   font-weight: 400;
 
@@ -585,7 +585,7 @@
     "Poppins",
     sans-serif;
 
-  font-size: 6.5px;
+  font-size: 8.5px;
 
   font-weight: 600;
 
@@ -748,7 +748,7 @@
   .ll-eyebrow {
     margin-bottom: 11px;
 
-    font-size: 7px;
+    font-size: 9px;
 
     letter-spacing: 2.4px;
   }
@@ -764,7 +764,7 @@
   .ll-header-right .ll-description {
     max-width: 350px;
 
-    font-size: 8.5px;
+    font-size: 11px;
 
     line-height: 1.7;
   }
@@ -806,14 +806,14 @@
     width: 37px;
     height: 37px;
 
-    font-size: 10px;
+    font-size: 12px;
   }
 
 
   .ll-status {
     padding: 6px 8px;
 
-    font-size: 5.5px;
+    font-size: 7.5px;
 
     letter-spacing: 1.4px;
   }
@@ -827,7 +827,7 @@
 
 
   .ll-area {
-    font-size: 6px;
+    font-size: 8px;
 
     letter-spacing: 1.7px;
   }
@@ -844,7 +844,7 @@
     margin:
       8px 0 13px;
 
-    font-size: 8px;
+    font-size: 10px;
 
     line-height: 1.6;
   }
@@ -856,7 +856,7 @@
     padding:
       0 10px;
 
-    font-size: 6px;
+    font-size: 8px;
   }
 }
 
@@ -885,7 +885,7 @@
 
 
   .ll-header-right .ll-description {
-    font-size: 8px;
+    font-size: 10px;
   }
 
 
@@ -902,7 +902,7 @@
   .ll-content .ll-description {
     max-width: 275px;
 
-    font-size: 7.7px;
+    font-size: 9.5px;
   }
 }
 
@@ -949,7 +949,7 @@
 
 
   .ll-content .ll-description {
-    font-size: 7.2px;
+    font-size: 9px;
 
     margin:
       7px 0 11px;
@@ -964,7 +964,7 @@
 
     gap: 5px;
 
-    font-size: 5.7px;
+    font-size: 7.5px;
   }
 }
 

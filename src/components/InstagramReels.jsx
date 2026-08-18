@@ -1,18 +1,37 @@
 import React, { useEffect, useRef, useState } from "react";
+/*
+  NOTE FOR CONTENT DATA (data/content.js):
+  Har REELS item mein ab ek naya optional field add karein —
+
+    previewVideoUrl: "/videos/reel-1-preview.mp4"
+
+  Yeh aapki khud ki hosted mp4 file honi chahiye (public/videos
+  folder mein daal ke, ya kisi CDN/S3 par upload karke). Agar
+  yeh field nahi diya, card grid automatically thumbnailUrl
+  wali static image hi dikhayega — koi crash nahi hoga.
+
+  Video file recommendations:
+    - Format: mp4 (H.264), muted (audio ki zaroorat nahi,
+      kyunki grid preview hamesha muted autoplay hota hai)
+    - Duration: 3-6 second looping clip best rehta hai
+    - Size: 1-3MB per file (compress karein, warna grid slow
+      load hoga)
+*/
+
 import {
   ArrowUpRight,
   Instagram,
   Play,
   X,
-  Volume2,
-  VolumeX,
 } from "lucide-react";
+
+import { REELS } from "../data/content.js";
 
 import "../Styles/InstagramReels.css";
 
+
 /* =========================================================
-   FALLBACK POSTER
-   (video load hone tak yeh dikhta hai)
+   FALLBACK IMAGE
 ========================================================= */
 
 const FALLBACK_THUMB =
@@ -20,374 +39,177 @@ const FALLBACK_THUMB =
 
 
 /* =========================================================
-   REELS DATA
-   Direct MP4 video URLs
-   NOTE: ab "thumbnailUrl" sirf poster (loading placeholder)
-   ke liye use hota hai, image card pe dikhti nahi.
-   Real video hi thumbnail ki jagah dikhega.
+   INSTAGRAM EMBED SCRIPT LOADER
+   -----------------------------------------------------------
+   Instagram reels/posts ko iframe mein "src" daal ke load
+   karna kaam NAHI karta (Instagram blank/broken embed deta
+   hai). Instagram sirf apne official embed.js widget se
+   hi properly render hota hai. Yeh script:
+     1. Instagram ka embed.js sirf ek baar load karta hai
+     2. Jab bhi naya <blockquote class="instagram-media">
+        DOM mein aaye, window.instgrm.Embeds.process() call
+        karke usse actual embed (iframe) mein convert karta hai
 ========================================================= */
 
-const REELS = [
-  {
-    id: "reel-1",
-    title: "Hair Transformation",
-    category: "HAIR",
-    thumbnailUrl:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-    instagramLink: "https://www.instagram.com/",
-  },
+let instagramScriptPromise = null;
 
-  {
-    id: "reel-2",
-    title: "Salon Moments",
-    category: "BEHIND THE SCENES",
-    thumbnailUrl:
-      "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-    instagramLink: "https://www.instagram.com/",
-  },
+function loadInstagramEmbedScript() {
+  if (typeof window === "undefined") {
+    return Promise.resolve();
+  }
 
-  {
-    id: "reel-3",
-    title: "Beauty Ritual",
-    category: "BEAUTY",
-    thumbnailUrl:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    instagramLink: "https://www.instagram.com/",
-  },
+  // Script already loaded / loading — reuse the same promise
+  if (instagramScriptPromise) {
+    return instagramScriptPromise;
+  }
 
-  {
-    id: "reel-4",
-    title: "Nail Details",
-    category: "NAILS",
-    thumbnailUrl:
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    instagramLink: "https://www.instagram.com/",
-  },
+  instagramScriptPromise = new Promise((resolve, reject) => {
+    // Agar script tag pehle se hai (e.g. hot reload), sirf
+    // process() call karke resolve kar do
+    const existing = document.querySelector(
+      'script[src="https://www.instagram.com/embed.js"]'
+    );
 
-  {
-    id: "reel-5",
-    title: "Men's Grooming",
-    category: "GROOMING",
-    thumbnailUrl:
-      "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    instagramLink: "https://www.instagram.com/",
-  },
+    if (existing && window.instgrm) {
+      resolve();
+      return;
+    }
 
-  {
-    id: "reel-6",
-    title: "Lumière Ambience",
-    category: "AMBIENCE",
-    thumbnailUrl:
-      "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    instagramLink: "https://www.instagram.com/",
-  },
-];
+    const script = document.createElement("script");
+    script.src = "https://www.instagram.com/embed.js";
+    script.async = true;
+    script.onload = () => resolve();
+    script.onerror = () =>
+      reject(new Error("Failed to load Instagram embed.js"));
+
+    document.body.appendChild(script);
+  });
+
+  return instagramScriptPromise;
+}
 
 
 /* =========================================================
    REEL CARD
+   -----------------------------------------------------------
+   Card grid mein hum video preview (agar available ho) ya
+   fallback thumbnail image dikhate hain — actual Instagram
+   embed sirf modal khulne par load hota hai.
 ========================================================= */
 
 function ReelCard({ reel, onOpen }) {
-  const videoRef = useRef(null);
-  const cardRef = useRef(null);
-
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const [videoError, setVideoError] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
+  const videoRef = useRef(null);
 
-  /* =======================================================
-     PLAY VIDEO
-  ======================================================= */
+  const thumbnail = reel.thumbnailUrl || FALLBACK_THUMB;
 
-  const playVideo = async () => {
-    const video = videoRef.current;
-
-    if (!video || !reel.videoUrl || videoError) {
-      return;
-    }
-
-    try {
-      video.muted = true;
-      video.playsInline = true;
-
-      await video.play();
-
-      setIsPlaying(true);
-    } catch (error) {
-      console.warn("Video could not play:", error);
-      setIsPlaying(false);
-    }
-  };
-
-
-  /* =======================================================
-     PAUSE VIDEO
-  ======================================================= */
-
-  const pauseVideo = () => {
-    const video = videoRef.current;
-
-    if (!video) {
-      return;
-    }
-
-    video.pause();
-
-    setIsPlaying(false);
-  };
-
-
-  /* =======================================================
-     AUTOPLAY WHEN REEL ENTERS VIEWPORT
-     (Mobile / scroll ke through — user jaise hi reel
-     tak pahunchta hai, video khud play ho jaata hai)
-  ======================================================= */
-
-  useEffect(() => {
-    const card = cardRef.current;
-
-    if (!card || !reel.videoUrl) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            playVideo();
-          } else {
-            pauseVideo();
-          }
-        });
-      },
-      {
-        threshold: 0.55,
-      }
-    );
-
-    observer.observe(card);
-
-    return () => {
-      observer.disconnect();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [reel.videoUrl, videoError]);
-
-
-  /* =======================================================
-     HOVER (DESKTOP) — reset + play from start
-  ======================================================= */
-
-  const handleMouseEnter = async () => {
-    const video = videoRef.current;
-
-    if (!video || !reel.videoUrl || videoError) {
-      return;
-    }
-
-    try {
-      video.currentTime = 0;
-    } catch (error) {
-      // Ignore reset error
-    }
-
-    playVideo();
-  };
-
-
-  const handleMouseLeave = () => {
-    const video = videoRef.current;
-
-    if (!video) {
-      return;
-    }
-
-    // Viewport observer will keep it playing on mobile;
-    // on desktop mouse leave pauses it.
-    pauseVideo();
-
-    try {
-      video.currentTime = 0;
-    } catch (error) {
-      // Ignore reset error
-    }
-  };
-
-
-  /* =======================================================
-     VIDEO ERROR
-  ======================================================= */
-
-  const handleVideoError = () => {
-    console.warn(
-      `Video failed to load for reel: ${reel.title}`
-    );
-
-    setVideoError(true);
-    setIsPlaying(false);
-  };
-
-
-  /* =======================================================
-     VIDEO PLAYING / PAUSE STATE SYNC
-  ======================================================= */
-
-  const handleVideoPlaying = () => {
-    setIsPlaying(true);
-  };
-
-  const handleVideoPause = () => {
-    setIsPlaying(false);
-  };
-
-
-  /* =======================================================
-     OPEN MODAL (sound ke saath)
-  ======================================================= */
+  // previewVideoUrl = aapki khud ki hosted .mp4 file
+  // (Instagram ka direct video kabhi use na karein — woh
+  // signed/expiring CDN link hota hai aur ToS ke against hai)
+  const hasVideo = Boolean(reel.previewVideoUrl) && !videoError;
 
   const handleClick = () => {
-    onOpen(reel, true);
+    if (!reel.instagramLink) {
+      return;
+    }
+
+    onOpen(reel);
   };
 
+  /* =======================================================
+     HOVER = PLAY, MOUSE HATTE HI = PAUSE + RESET
+  ======================================================= */
+
+  const handleMouseEnter = () => {
+    if (!hasVideo) return;
+
+    setIsPlaying(true);
+
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // autoplay-on-hover kuch browsers strict mode mein
+        // block kar sakte hain — silently ignore karte hain
+      });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!hasVideo) return;
+
+    setIsPlaying(false);
+
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
 
   return (
     <article
-      ref={cardRef}
-      className={`lr-card ${
-        isPlaying && !videoError
-          ? "lr-card-playing"
-          : ""
-      }`}
+      className={`lr-card ${isPlaying ? "lr-card-playing" : ""}`}
+      onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={handleClick}
     >
-
       <div className="lr-image-wrap">
-
-        {/* =================================================
-            VIDEO (real video hi thumbnail hai — koi
-            static image ab dikhti nahi)
-        ================================================= */}
-
-        {!videoError && reel.videoUrl ? (
+        {hasVideo ? (
           <video
             ref={videoRef}
-            className="lr-preview-video lr-preview-video-visible"
-            src={reel.videoUrl}
+            className="lr-preview-video"
+            src={reel.previewVideoUrl}
+            poster={!imageError ? thumbnail : undefined}
             muted
             loop
             playsInline
-            preload="auto"
-            poster={
-              reel.thumbnailUrl ||
-              FALLBACK_THUMB
-            }
-            onError={handleVideoError}
-            onPlaying={handleVideoPlaying}
-            onPause={handleVideoPause}
+            preload="metadata"
+            onError={() => setVideoError(true)}
           />
-        ) : (
+        ) : !imageError ? (
           <img
             className="lr-image"
-            src={
-              reel.thumbnailUrl ||
-              FALLBACK_THUMB
-            }
-            alt={
-              reel.title ||
-              "Lumière Reel"
-            }
+            src={thumbnail}
+            alt={reel.title || "Stylette Family Salon Instagram Reel"}
             loading="lazy"
+            onError={() => setImageError(true)}
           />
+        ) : (
+          <div className="lr-image lr-image-fallback">
+            <Instagram size={32} strokeWidth={1.4} />
+          </div>
         )}
-
-
-        {/* =================================================
-            OVERLAY
-        ================================================= */}
 
         <div className="lr-overlay"></div>
 
-
-        {/* =================================================
-            TOP
-        ================================================= */}
-
         <div className="lr-top">
-
           <span className="lr-instagram">
-            <Instagram
-              size={12}
-              strokeWidth={1.6}
-            />
+            <Instagram size={12} strokeWidth={1.6} />
           </span>
 
-          <span className="lr-reel-label">
-            REEL
-          </span>
-
+          <span className="lr-reel-label">REEL</span>
         </div>
 
-
-        {/* =================================================
-            PLAY BUTTON
-            (sirf tab dikhta hai jab video pause ho)
-        ================================================= */}
-
-        {!isPlaying && (
-          <span className="lr-play">
-            <Play
-              size={15}
-              fill="currentColor"
-              strokeWidth={1.2}
-            />
-          </span>
-        )}
-
-
-        {/* =================================================
-            CONTENT
-        ================================================= */}
+        <span className="lr-play">
+          <Play size={15} fill="currentColor" strokeWidth={1.2} />
+        </span>
 
         <div className="lr-content">
-
           <span className="lr-category">
-            {reel.category ||
-              "LUMIÈRE"}
+            {reel.category || "STYLETTE FAMILY SALON"}
           </span>
 
           <h3 className="lr-card-title">
-            {reel.title ||
-              "Lumière Moments"}
+            {reel.title || "Stylette Family Salon Moments"}
           </h3>
 
           <span className="lr-watch">
             WATCH REEL
-
-            <ArrowUpRight
-              size={11}
-              strokeWidth={1.5}
-            />
+            <ArrowUpRight size={11} strokeWidth={1.5} />
           </span>
-
         </div>
-
       </div>
-
     </article>
   );
 }
@@ -395,21 +217,20 @@ function ReelCard({ reel, onOpen }) {
 
 /* =========================================================
    REEL MODAL
+   -----------------------------------------------------------
+   Instagram ka official <blockquote class="instagram-media"
+   data-instgrm-permalink> markup use hota hai. embed.js load
+   hone ke baad window.instgrm.Embeds.process() call karte hi
+   Instagram khud is blockquote ko replace karke actual
+   working iframe bana deta hai.
 ========================================================= */
 
-function ReelModal({
-  reel,
-  startWithSound,
-  onClose,
-}) {
-  const modalVideoRef = useRef(null);
-
-  const [isMuted, setIsMuted] =
-    useState(!startWithSound);
-
+function ReelModal({ reel, onClose }) {
+  const [status, setStatus] = useState("loading"); // loading | ready | error
+  const embedContainerRef = useRef(null);
 
   /* =======================================================
-     BODY SCROLL LOCK
+     BODY LOCK + ESC
   ======================================================= */
 
   useEffect(() => {
@@ -425,270 +246,138 @@ function ReelModal({
       }
     };
 
-    window.addEventListener(
-      "keydown",
-      handleKeyDown
-    );
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.body.style.overflow = "";
-
-      window.removeEventListener(
-        "keydown",
-        handleKeyDown
-      );
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [reel, onClose]);
 
-
   /* =======================================================
-     PLAY MODAL VIDEO
+     LOAD + PROCESS INSTAGRAM EMBED WHENEVER REEL CHANGES
   ======================================================= */
 
   useEffect(() => {
-    if (!reel) {
+    if (!reel || !reel.instagramLink) {
       return;
     }
 
-    const video =
-      modalVideoRef.current;
+    let cancelled = false;
+    setStatus("loading");
 
-    if (!video) {
-      return;
-    }
+    loadInstagramEmbedScript()
+      .then(() => {
+        if (cancelled) return;
 
-    video.muted =
-      !startWithSound;
-
-    setIsMuted(
-      !startWithSound
-    );
-
-    const playVideo =
-      async () => {
-        try {
-          await video.play();
-        } catch (error) {
-          console.warn(
-            "Modal autoplay failed:",
-            error
-          );
+        if (window.instgrm && window.instgrm.Embeds) {
+          window.instgrm.Embeds.process();
         }
-      };
 
-    playVideo();
+        setTimeout(() => {
+          if (!cancelled) setStatus("ready");
+        }, 600);
+      })
+      .catch(() => {
+        if (!cancelled) setStatus("error");
+      });
 
-  }, [
-    reel,
-    startWithSound,
-  ]);
-
+    return () => {
+      cancelled = true;
+    };
+  }, [reel]);
 
   if (!reel) {
     return null;
   }
 
+  const openInstagram = () => {
+    if (!reel.instagramLink) {
+      return;
+    }
 
-  /* =======================================================
-     SOUND TOGGLE
-  ======================================================= */
-
-  const toggleSound =
-    async () => {
-      const video =
-        modalVideoRef.current;
-
-      if (!video) {
-        return;
-      }
-
-      const nextMuted =
-        !video.muted;
-
-      video.muted =
-        nextMuted;
-
-      setIsMuted(
-        nextMuted
-      );
-
-      try {
-        await video.play();
-      } catch (error) {
-        console.warn(error);
-      }
-    };
-
-
-  /* =======================================================
-     INSTAGRAM
-  ======================================================= */
-
-  const openInstagram =
-    () => {
-      if (!reel.instagramLink) {
-        return;
-      }
-
-      window.open(
-        reel.instagramLink,
-        "_blank",
-        "noopener,noreferrer"
-      );
-    };
-
+    window.open(reel.instagramLink, "_blank", "noopener,noreferrer");
+  };
 
   return (
-    <div
-      className="lr-modal-overlay"
-      onClick={onClose}
-    >
-
+    <div className="lr-modal-overlay" onClick={onClose}>
       <div
-        className="lr-modal"
-        onClick={(event) =>
-          event.stopPropagation()
-        }
+        className="lr-modal lr-instagram-modal"
+        onClick={(event) => event.stopPropagation()}
       >
-
-        {/* CLOSE */}
-
         <button
           type="button"
           className="lr-modal-close"
           onClick={onClose}
           aria-label="Close reel"
         >
-          <X
-            size={18}
-            strokeWidth={1.6}
-          />
+          <X size={18} strokeWidth={1.6} />
         </button>
 
+        <div className="lr-modal-instagram-wrap" ref={embedContainerRef}>
+          {status === "loading" && (
+            <div className="lr-instagram-loading">
+              <Instagram size={28} strokeWidth={1.4} />
+              <span>Loading Reel...</span>
+            </div>
+          )}
 
-        {/* VIDEO */}
-
-        <div className="lr-modal-video-wrap">
-
-          <video
-            ref={modalVideoRef}
-            className="lr-modal-video"
-            src={reel.videoUrl}
-            controls
-            autoPlay
-            muted={!startWithSound}
-            loop
-            playsInline
-            preload="auto"
-            poster={
-              reel.thumbnailUrl ||
-              FALLBACK_THUMB
-            }
-          />
-
-
-          {/* SOUND */}
-
-          <button
-            type="button"
-            className="lr-sound-button"
-            onClick={toggleSound}
-            aria-label={
-              isMuted
-                ? "Turn sound on"
-                : "Mute video"
-            }
-          >
-
-            {isMuted ? (
-              <VolumeX
-                size={16}
-                strokeWidth={1.5}
-              />
-            ) : (
-              <Volume2
-                size={16}
-                strokeWidth={1.5}
-              />
-            )}
-
-          </button>
-
+          {reel.instagramLink ? (
+            <div
+              className="lr-modal-instagram-embed"
+              style={{
+                display: status === "loading" ? "none" : "flex",
+              }}
+            >
+              <blockquote
+                key={reel.instagramLink}
+                className="instagram-media"
+                data-instgrm-permalink={reel.instagramLink}
+                data-instgrm-version="14"
+                style={{
+                  background: "#FFF",
+                  border: 0,
+                  margin: "0 auto",
+                  width: "100%",
+                }}
+              >
+                <a
+                  href={reel.instagramLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View this reel on Instagram
+                </a>
+              </blockquote>
+            </div>
+          ) : (
+            <div className="lr-instagram-error">
+              <Instagram size={30} strokeWidth={1.4} />
+              <span>Invalid Instagram Reel URL.</span>
+            </div>
+          )}
         </div>
 
-
-        {/* INFO */}
-
         <div className="lr-modal-info">
-
           <div className="lr-modal-text">
-
             <span className="lr-modal-category">
-              {reel.category ||
-                "LUMIÈRE"}
+              {reel.category || "STYLETTE FAMILY SALON"}
             </span>
 
-            <h3>
-              {reel.title ||
-                "Lumière Moments"}
-            </h3>
-
+            <h3>{reel.title || "Stylette Family Salon Moments"}</h3>
           </div>
-
 
           <button
             type="button"
             className="lr-modal-ig-link"
-            onClick={
-              openInstagram
-            }
+            onClick={openInstagram}
           >
-
-            <Instagram
-              size={13}
-              strokeWidth={1.6}
-            />
-
-            <span>
-              VIEW ON INSTAGRAM
-            </span>
-
-            <ArrowUpRight
-              size={12}
-              strokeWidth={1.5}
-            />
-
+            <Instagram size={13} strokeWidth={1.6} />
+            <span>VIEW ON INSTAGRAM</span>
+            <ArrowUpRight size={12} strokeWidth={1.5} />
           </button>
-
         </div>
-
-
-        {/* SOUND HINT */}
-
-        <div className="lr-modal-sound-hint">
-
-          {isMuted ? (
-            <VolumeX
-              size={11}
-              strokeWidth={1.5}
-            />
-          ) : (
-            <Volume2
-              size={11}
-              strokeWidth={1.5}
-            />
-          )}
-
-          <span>
-            {isMuted
-              ? "Tap sound to unmute"
-              : "Sound is on"}
-          </span>
-
-        </div>
-
       </div>
-
     </div>
   );
 }
@@ -699,83 +388,29 @@ function ReelModal({
 ========================================================= */
 
 export default function InstagramReels() {
+  const [activeReel, setActiveReel] = useState(null);
 
-  const [activeReel, setActiveReel] =
-    useState(null);
-
-  const [startWithSound, setStartWithSound] =
-    useState(false);
-
-
-  /* =======================================================
-     OPEN
-  ======================================================= */
-
-  const openReel = (
-    reel,
-    withSound = true
-  ) => {
-    setStartWithSound(
-      withSound
-    );
-
-    setActiveReel(
-      reel
-    );
-  };
-
-
-  /* =======================================================
-     CLOSE
-  ======================================================= */
-
-  const closeReel = () => {
-    setActiveReel(null);
-    setStartWithSound(false);
-  };
-
+  const openReel = (reel) => setActiveReel(reel);
+  const closeReel = () => setActiveReel(null);
 
   return (
     <>
-      <section
-        className="lr-section"
-        id="instagram-reels"
-      >
-
+      <section className="lr-section" id="instagram-reels">
         <div className="lr-container">
-
-          {/* =================================================
-              HEADER
-          ================================================= */}
-
           <div className="lr-header">
-
             <div className="lr-header-left">
-
-              <span className="lr-eyebrow">
-                INSTAGRAM
-              </span>
+              <span className="lr-eyebrow">INSTAGRAM</span>
 
               <h2 className="lr-title">
-                Life at
-                <span>
-                  {" "}Lumière.
-                </span>
+                Life at<span> Stylette Family Salon.</span>
               </h2>
-
             </div>
 
-
             <div className="lr-header-right">
-
               <p className="lr-description">
-                Follow our latest
-                transformations,
-                salon moments and
-                beautiful details
-                from inside Lumière.
+                Follow our latest transformations, salon moments and
+                beautiful details from inside Stylette Family Salon.
               </p>
-
 
               <a
                 className="lr-follow"
@@ -783,97 +418,34 @@ export default function InstagramReels() {
                 target="_blank"
                 rel="noreferrer"
               >
-
-                <Instagram
-                  size={13}
-                  strokeWidth={1.6}
-                />
-
-                <span>
-                  FOLLOW US
-                </span>
-
-                <ArrowUpRight
-                  size={12}
-                  strokeWidth={1.5}
-                />
-
+                <Instagram size={13} strokeWidth={1.6} />
+                <span>FOLLOW US</span>
+                <ArrowUpRight size={12} strokeWidth={1.5} />
               </a>
-
             </div>
-
           </div>
-
-
-          {/* =================================================
-              DECORATIVE LINE
-          ================================================= */}
 
           <div className="lr-heading-line">
-
             <span></span>
-
             <i></i>
-
             <span></span>
-
           </div>
-
-
-          {/* =================================================
-              REELS
-          ================================================= */}
 
           <div className="lr-track">
-
-            {REELS.map(
-              (reel) => (
-                <ReelCard
-                  key={reel.id}
-                  reel={reel}
-                  onOpen={
-                    openReel
-                  }
-                />
-              )
-            )}
-
+            {REELS.map((reel) => (
+              <ReelCard key={reel.id} reel={reel} onOpen={openReel} />
+            ))}
           </div>
-
-
-          {/* MOBILE HINT */}
 
           <div className="lr-swipe">
-
             <span></span>
-
-            <p>
-              EXPLORE OUR REELS
-            </p>
-
+            <p>EXPLORE OUR REELS</p>
             <span></span>
-
           </div>
-
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          MODAL
-      ===================================================== */}
-
-      <ReelModal
-        reel={activeReel}
-        startWithSound={
-          startWithSound
-        }
-        onClose={
-          closeReel
-        }
-      />
-
+      <ReelModal reel={activeReel} onClose={closeReel} />
     </>
   );
 }

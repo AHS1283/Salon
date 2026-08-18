@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
+// import AboutVideo from "./components/AboutVideo.jsx";
 import Services from "./components/Services.jsx";
 import FeaturesBar from "./components/FeaturesBar.jsx";
 
@@ -15,17 +16,19 @@ import OurWork from "./components/OurWork.jsx";
 import WorksGallery from "./components/WorksGallery.jsx";
 import ServicesGallery from "./components/ServicesGallery.jsx";
 import InstagramReels from "./components/InstagramReels.jsx";
+import SocialSidebar from "./components/SocialSidebar.jsx";
 
 function HomePage() {
   return (
     <>
       <Hero />
       <About />
+      {/* <AboutVideo /> */}
       <Services />
       <FeaturesBar />
       <OurWork />
       <OurLocations />
-      
+
       <InstagramReels />
       <Team />
       <Testimonials />
@@ -38,6 +41,7 @@ export default function App() {
   return (
     <div className="lumiere">
       <Header />
+      <SocialSidebar />
 
       <Routes>
         <Route path="/" element={<HomePage />} />

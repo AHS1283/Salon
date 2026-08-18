@@ -1,0 +1,258 @@
+/* =========================================================
+   LUMIÈRE SALON & SPA
+   FLOATING SOCIAL SIDEBAR
+   Fixed / Right Edge / Vertical
+========================================================= */
+
+.ss-sidebar,
+.ss-sidebar * {
+  box-sizing: border-box;
+}
+
+.ss-sidebar {
+  position: fixed;
+
+  z-index: 9998;
+
+  right: 22px;
+  bottom: 0;
+
+  top: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.ss-line {
+  width: 1px;
+
+  height: 46px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      #bba28d 55%,
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.ss-list {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+
+  pointer-events: auto;
+}
+
+.ss-item {
+  display: flex;
+}
+
+
+/* =========================================================
+   LINK / ICON
+   Har platform ka apna proper brand color hamesha
+   visible rehta hai, sirf hover pe nahi.
+========================================================= */
+
+.ss-link {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  box-shadow: 0 8px 20px rgba(50, 38, 28, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+.ss-link:hover {
+  transform: translateX(-4px) scale(1.06);
+
+  box-shadow: 0 14px 28px rgba(50, 38, 28, 0.26);
+
+  filter: brightness(1.06);
+}
+
+
+/* =========================================================
+   BRAND COLORS
+========================================================= */
+
+.ss-link-instagram {
+  background:
+    radial-gradient(
+      circle at 30% 110%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+}
+
+.ss-link-facebook {
+  background: #1877f2;
+}
+
+.ss-link-whatsapp {
+  background: #25d366;
+}
+
+
+/* =========================================================
+   TOOLTIP
+   Sidebar ab right edge pe hai, isliye tooltip
+   left side mein khulta hai.
+========================================================= */
+
+.ss-tooltip {
+  position: absolute;
+
+  right: calc(100% + 10px);
+
+  top: 50%;
+
+  transform: translateY(-50%) translateX(6px);
+
+  padding: 5px 10px;
+
+  border-radius: 3px;
+
+  background: #2b2521;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ss-tooltip::before {
+  content: "";
+
+  position: absolute;
+
+  right: -4px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-width: 4px 0 4px 4px;
+
+  border-style: solid;
+
+  border-color: transparent transparent transparent #2b2521;
+}
+
+.ss-link:hover .ss-tooltip {
+  opacity: 1;
+
+  transform: translateY(-50%) translateX(0);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .ss-sidebar {
+    right: 14px;
+
+    gap: 10px;
+  }
+
+  .ss-line {
+    height: 34px;
+  }
+
+  .ss-link {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   Sidebar hata di jaati hai taaki content overlap na ho —
+   isके bajaye chaho to bottom-fixed bar bhi bana sakte hain.
+========================================================= */
+
+@media (max-width: 640px) {
+  .ss-sidebar {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .ss-sidebar * {
+    transition-duration: 0.01ms !important;
+  }
+}

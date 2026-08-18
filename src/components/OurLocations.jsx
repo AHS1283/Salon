@@ -3,43 +3,9 @@ import {
   ArrowUpRight,
   MapPin,
 } from "lucide-react";
-import "../Styles/OurLocations.css";
 
-const LOCATIONS = [
-  {
-    number: "01",
-    city: "Mumbai",
-    area: "Bandra West",
-    description:
-      "Our signature Lumière space in the heart of Bandra.",
-    image:
-      "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85",
-    map:
-      "https://www.google.com/maps/search/?api=1&query=Bandra+West+Mumbai",
-  },
-  {
-    number: "02",
-    city: "Pune",
-    area: "Koregaon Park",
-    description:
-      "A calm, intimate salon experience in Koregaon Park.",
-    image:
-      "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=85",
-    map:
-      "https://www.google.com/maps/search/?api=1&query=Koregaon+Park+Pune",
-  },
-  {
-    number: "03",
-    city: "Nashik",
-    area: "College Road",
-    description:
-      "Modern beauty, thoughtful service and Lumière warmth.",
-    image:
-      "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85",
-    map:
-      "https://www.google.com/maps/search/?api=1&query=College+Road+Nashik",
-  },
-];
+import { LOCATIONS } from "../data/content.js";
+import "../Styles/OurLocations.css";
 
 export default function Locations() {
   return (
@@ -49,56 +15,80 @@ export default function Locations() {
     >
       <div className="ll-container">
 
-        {/* HEADER */}
+        {/* =========================================
+            HEADER
+        ========================================== */}
+
         <div className="ll-header">
 
           <div className="ll-header-left">
+
             <span className="ll-eyebrow">
               OUR LOCATIONS
             </span>
 
             <h2 className="ll-title">
               Find your
-              <span> Lumière.</span>
+              <span> Stylette Family Salon.</span>
             </h2>
+
           </div>
 
+
           <div className="ll-header-right">
+
             <p className="ll-description">
-              Discover a Lumière salon near you,
+              Discover a Stylette Family Salon near you,
               each thoughtfully designed to offer
               the same signature experience.
             </p>
+
           </div>
 
         </div>
 
-        {/* LINE */}
+
+        {/* =========================================
+            DECORATIVE LINE
+        ========================================== */}
+
         <div className="ll-heading-line">
           <span></span>
           <i></i>
           <span></span>
         </div>
 
-        {/* LOCATIONS */}
+
+        {/* =========================================
+            LOCATIONS
+        ========================================== */}
+
         <div className="ll-grid">
 
           {LOCATIONS.map((location) => (
+
             <article
               className="ll-card"
               key={location.number}
             >
 
+              {/* IMAGE */}
+
               <img
                 className="ll-image"
                 src={location.image}
-                alt={`${location.city} Lumière Salon`}
+                alt={`${location.city} Stylette Family Salon`}
                 loading="lazy"
               />
 
+
+              {/* OVERLAY */}
+
               <div className="ll-overlay"></div>
 
-              {/* TOP */}
+
+              {/* TOP INFORMATION */}
+
               <div className="ll-top">
 
                 <span className="ll-number">
@@ -106,12 +96,14 @@ export default function Locations() {
                 </span>
 
                 <span className="ll-status">
-                  LUMIÈRE SALON
+                  STYLETTE FAMILY SALON
                 </span>
 
               </div>
 
+
               {/* CONTENT */}
+
               <div className="ll-content">
 
                 <small className="ll-area">
@@ -126,12 +118,17 @@ export default function Locations() {
                   {location.description}
                 </p>
 
+
+                {/* MAP BUTTON */}
+
                 <a
                   href={location.map}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="ll-map-button"
+                  aria-label={`View ${location.city} salon location on Google Maps`}
                 >
+
                   <MapPin
                     size={11}
                     strokeWidth={1.5}
@@ -145,11 +142,13 @@ export default function Locations() {
                     size={11}
                     strokeWidth={1.5}
                   />
+
                 </a>
 
               </div>
 
             </article>
+
           ))}
 
         </div>

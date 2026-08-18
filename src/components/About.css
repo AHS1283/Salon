@@ -500,7 +500,7 @@
     Arial,
     sans-serif;
 
-  font-size: 8px;
+  font-size: 9.5px;
 
   line-height: 1.6;
 }
@@ -563,7 +563,7 @@
   }
 
   .about-feature p {
-    font-size: 8.5px;
+    font-size: 10px;
   }
 }
 
@@ -625,7 +625,7 @@
   }
 
   .about-feature p {
-    font-size: 7.5px;
+    font-size: 9px;
   }
 }
 
@@ -756,7 +756,7 @@
   .about-feature p {
     max-width: 125px;
 
-    font-size: 8px;
+    font-size: 9.5px;
 
     line-height: 1.6;
   }
@@ -809,7 +809,7 @@
   }
 
   .about-feature p {
-    font-size: 7.5px;
+    font-size: 9px;
   }
 }
 
@@ -853,7 +853,7 @@
   }
 
   .about-feature p {
-    font-size: 7px;
+    font-size: 8.5px;
   }
 }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, Menu, X, Sparkles } from "lucide-react";
 import { NAV_LINKS } from "../data/content.js";
-import logo from "../assets/lohorich.png";
+import logo from "../assets/logovilla.png";
 import "../Styles/Header.css";
 
 const ID_OVERRIDES = {
@@ -100,7 +100,7 @@ export default function Header() {
 
           <span className="logo-text-group">
             <span className="logo-main">
-              RICH BIT SALON
+              The Hair Villa Unisex Salon
             </span>
 
             <span className="logo-sub">

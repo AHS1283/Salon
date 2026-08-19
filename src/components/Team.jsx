@@ -56,7 +56,7 @@ export default function Team() {
 
             <div className="why-heading">
               <span className="why-eyebrow">
-                RICHBIT SALON
+                The Hair Villa Unisex Salon
               </span>
 
               <h3>

@@ -36,7 +36,7 @@ export default function OurWork() {
           <div className="lw-header-right">
             <p className="lw-description">
               A glimpse into the artistry, creativity and attention to
-              detail behind every THE HAIR SPACE  experience.
+              detail behind every RICHBIT SALON  experience.
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function OurWork() {
               <img
                 className="lw-image"
                 src={item.imageUrl || FALLBACK_IMAGE}
-                alt={item.title || item.category || "THE HAIR SPACE work"}
+                alt={item.title || item.category || "RICHBIT SALON work"}
                 loading="lazy"
                 onLoad={() => handleImageLoaded(item.id)}
                 onError={handleImageError}

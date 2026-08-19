@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import "./About.css";
 
-import aboutImage from "../assets/about_hairSpace.webp";
+import aboutImage from "../assets/aboutrich.webp";
 
 const FEATURES = [
   {

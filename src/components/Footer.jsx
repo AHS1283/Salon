@@ -122,7 +122,7 @@ export default function Footer() {
           <div className="footer-about">
 
             <div className="footer-logo">
-              THE HAIR SPACE
+              RICHBIT SALON
             </div>
 
             <p>
@@ -319,7 +319,7 @@ export default function Footer() {
         <div className="footer-bottom">
 
           <span>
-            © 2026  THE HAIR SPACE.
+            © 2026  RICHBIT SALON.
             All rights reserved.
           </span>
 

@@ -48,7 +48,7 @@ export const SERVICES = [
 
   {
     id: "service-2",
-    img: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnsCwLm1bK122c0-G5CdYGHTb_gljI_QexJ5G73AwapJheBThcFk32W2rVEVtayYplg2FIK-75OifGbgW1DytUDs3HmE_qI3trAO7RJcLKVWilTG7VGknUFM99H2gQBWJmaOQTDRhU5S_Xk=s680-w680-h510-rw",
+    img: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnHOA_4ggpIIaKakZ7jrUmnD3Mxq1fsflFTpEOb1iwmxqRXkn2LCmFZfNrU5eNM9x43DAwFwvm5dsPixz9Fpsm6tZSPqZS9-mMObjaiQwg4J9hdqi-_Z-UGnfQANcp3pjmz0ZRv=s680-w680-h510-rw",
     title: "Hair Color",
     desc: "Color, highlights & ombre",
     price: "₹1499",
@@ -158,53 +158,6 @@ export const ABOUT_ITEMS = [
 ];
 
 
-/* =========================================================
-   GALLERY
-========================================================= */
-
-export const GALLERY = [
-  {
-    id: "gallery-1",
-    cat: "Interior",
-    img: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=500&q=80",
-  },
-
-  {
-    id: "gallery-2",
-    cat: "Grooming",
-    img: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500&q=80",
-  },
-
-  {
-    id: "gallery-3",
-    cat: "Hair",
-    img: "https://images.unsplash.com/photo-1595475207225-428b62bda831?w=500&q=80",
-  },
-
-  {
-    id: "gallery-4",
-    cat: "Skin",
-    img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=500&q=80",
-  },
-
-  {
-    id: "gallery-5",
-    cat: "Nails",
-    img: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&q=80",
-  },
-
-  {
-    id: "gallery-6",
-    cat: "Grooming",
-    img: "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=500&q=80",
-  },
-
-  {
-    id: "gallery-7",
-    cat: "Interior",
-    img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&q=80",
-  },
-];
 
 
 /* =========================================================
@@ -293,7 +246,7 @@ export const LOCATIONS = [
   //   city: "Mumbai",
   //   area: "Bandra West",
   //   description:
-  //     "Our signature The Hair Space space in the heart of Bandra.",
+  //     "Our signature RICHBIT SALON space in the heart of Bandra.",
   //   image:
   //     "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85",
   //   map:
@@ -303,11 +256,11 @@ export const LOCATIONS = [
    {
     number: "01",
     city: "Pune",
-    area: "Wakad,Pimpri-Chinchwad",
+    area: "Xion mall,Hinjewadi",
     description:
-      "A calm, intimate salon experience in Pimpri-Chinchwad.",
+      "A calm, intimate salon experience in Hinjewadi.",
     image:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnv-hPtJn6k-AIiZ2FNGQuqrbJvUasXi4IAm7jz78caiWanCulpaiD7-mYJu8-0bNFOkLr2ySvIFgAuOmnrITFKSf9-N5LyBADvFznK72v9JitvnIz2xH2JclDoFaucyE1UeEsRc486fqzX=s680-w680-h510-rw",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkmWkwqP3eCvt788GMs5VPeAmtFDobR8gxTtJX4c3ZHjyJD0NKUfubOGD9zNroCARutd52nKtf349unMv2C-qf06IBy_U21eYQeG0HVZ8mdpdaEv57uDrrZR4PO55M_joVo6iZ0Gg=s680-w680-h510-rw",
     map:
       "https://www.google.com/maps/search/?api=1&query=The+Hair+Space+Pimple+Nilakh+Pune",
   },
@@ -317,7 +270,7 @@ export const LOCATIONS = [
   //   city: "Nashik",
   //   area: "College Road",
   //   description:
-  //     "Modern beauty, thoughtful service and THE HAIR SPACE warmth.",
+  //     "Modern beauty, thoughtful service and RICHBIT SALON warmth.",
   //   image:
   //     "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85",
   //   map:
@@ -336,7 +289,7 @@ export const DUMMY_WORKS = [
     category: "Hair",
     title: "Signature Hair",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnXrSUqZLlyWcSDZSpI2RLjgwFz_TzcqE2Onv-_M7D8wGxQMSGH_P_O-kyrfKwDr4JhIaYrUzFpRuyjP7lXVrPo4elpEA-1qiLpCSLetKj8dFfia5_Q8cFv5zlW1EiN7z0rK1vbLgFO39Am=s680-w680-h510-rw",
+     "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl2z4-FUiHYrO6BfuJTlToRiixCas7zczkK_GzsO0f4gtfqPTstg1Gy6zKdbhvWWL_Y_PtEW5wOSdceUntMpK74pq1rI9yZgNbvTtfROc3DK_6aI-ZSG454Gx3MhSs-wj2i81qU0Q=s680-w680-h510-rw",
   },
 
   {
@@ -344,15 +297,14 @@ export const DUMMY_WORKS = [
     category: "Hair",
     title: "Luxury Styling",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm0Jw7GEuxEE1fl06Qp_9HOg6vhjYVh2z03OLWIX_la9_7jIPUGzC8KLTOcbT32C9GIlTT0fqVirdMLJR2ilFLaZfQcbOucGSzjm2R49rIB4ZrlUXubGiyxQJcWlR2k47cLZkGyBLIt5IWj=s680-w680-h510-rw",
+     "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnHOA_4ggpIIaKakZ7jrUmnD3Mxq1fsflFTpEOb1iwmxqRXkn2LCmFZfNrU5eNM9x43DAwFwvm5dsPixz9Fpsm6tZSPqZS9-mMObjaiQwg4J9hdqi-_Z-UGnfQANcp3pjmz0ZRv=s680-w680-h510-rw",
   },
-
   {
     id: "dummy-3",
     category: "Skin",
     title: "Facial Care",
     imageUrl:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkg4oQAYbYeMRhbdYrDNcD4No6W0a6EjwhbSB9MqKQY3Gb8nc2Gest9zCJ546pLmTfqXZv2Eu2HNx4nyA1vl3HvyoqZE8uFZHPcKvW50Lv2htNB6Z0yCLvdI18bppEx5hs2LdlzD1kc9OI_=s680-w680-h510-rw",
+     "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkxT-Tg-wsRJtQcxD-gMMeZ2B2uCWi5m-pgN78LdLlce_8ESvphaOwWgNqo9kVO1Llku0WuAzAFN7vdCfvP058rKqw7bn673VixPApEnfZor1vUy1v9KKcTYrmF9P8Az7T0vrL1tg=s680-w680-h510-rw",
   },
 
   {
@@ -360,7 +312,7 @@ export const DUMMY_WORKS = [
     category: "Grooming",
     title: "Men's Grooming",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl1lAqqiEvMvSRDyA3htIKNtw1zCeS0Gk1OQ0ThcGBgAM_55PNZw5YmWtJtUbPbjYNRj7YO2bB58o9OnZgunJUDGE0A_Zb02hXxOu-UCoGNtHhvwfcWcOvyaGqEi8n09c8BG-Mje9gvurbr=s680-w680-h510-rw"
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk1eqXMB4UQuKfyKoJo1vQZ-XCYUSzFcssJPqYMZZovVXS-0VFowe7DkXqNYKPd6N0QwNBBu5RyjxJ-DZ4NyAcZ0eVK49xC0Fs9EQ_LCkIAy0F6626okwoj9VdOeuZ0RVEwYx_dteMnEai0=s680-w680-h510-rw",
   },
 
   {
@@ -368,7 +320,7 @@ export const DUMMY_WORKS = [
     category: "Beauty",
     title: "Soft Glam",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkFsP3U4fPf5W9GamlPO5VaQpCCPN3yyxX_VKcpanhSDTRMxUJCdfh67RdEQ0oAZx5wVuCplTp6_HBjkjUdgcnzq9gzNkn8VqCVCREyvcbxQOlFpzNxbAHW8KlZxAtnmkkgW7gqK-gQOo84=s680-w680-h510-rw"
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnjxSGyvYqkSvw8bka6UK2t7pj6qJSPt41VLjM7uRLchuE74TH8aPKYQC0mOSn3fziRGKg_BlAayK5IlHrNcsqytYwRRwG1QrPE2WDm4hFgqZ58NDuIWNnp59IQ1ZnVeY2gv_O-X0OIsdYJ=s680-w680-h510-rw",
   },
 
   {
@@ -391,7 +343,7 @@ export const DUMMY_WORKS = [
     category: "Interior",
     title: "Salon Interior",
     imageUrl:
-     "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnBSI3Pffq7uafyAfVFTBd9umid73fC8aAboj_5SNqWPbuGGbTzyqs88NXteUr0bLmH2mC6hF73sOzvH8WWMx3wfQP12E7g4U9wT1W1m1w8v4NRVJCfz3ucIxK5OA61b5rdN9J2ww=s680-w680-h510-rw",
+    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkor5sEPCQo2bLl88cXbrfCKW9k6mjsLJB4NKxbRuLj65MDAdycUFybI07PzlO_xvd1fwOlXBs6PfEzHVPHHQg9oF_IFdLSLNliDRMghi10YVHotaZaSeknW0g7hQILFbsvbSjYgk7T012H=s680-w680-h510-rw",
 
   }  ];
 
@@ -429,7 +381,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-1.mp4",
+    previewVideoUrl: "/videos/rich1.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -443,7 +395,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-2.mp4",
+    previewVideoUrl: "/videos/rich2.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -457,7 +409,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-3.mp4",
+    previewVideoUrl: "/videos/rich3.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -471,7 +423,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-4.mp4",
+    previewVideoUrl: "/videos/rich4.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -485,7 +437,7 @@ export const REELS = [
     thumbnailUrl:
       "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-6.mp4",
+    previewVideoUrl: "/videos/rich6.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
@@ -493,13 +445,13 @@ export const REELS = [
 
   {
     id: "reel-6",
-    title: "The Hair Space Ambience",
+    title: "RICHBIT SALON Ambience",
     category: "AMBIENCE",
 
     thumbnailUrl:
       "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85",
 
-    previewVideoUrl: "/videos/reel-5.mp4",
+    previewVideoUrl: "/videos/rich5.mp4",
 
     instagramLink:
       "https://www.instagram.com/reel/DbvbJtONTzn/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",

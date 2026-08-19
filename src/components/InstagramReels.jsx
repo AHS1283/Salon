@@ -171,7 +171,7 @@ function ReelCard({ reel, onOpen }) {
           <img
             className="lr-image"
             src={thumbnail}
-            alt={reel.title || "THE HAIR SPACE Instagram Reel"}
+            alt={reel.title || "RICHBIT SALON Instagram Reel"}
             loading="lazy"
             onError={() => setImageError(true)}
           />
@@ -197,11 +197,11 @@ function ReelCard({ reel, onOpen }) {
 
         <div className="lr-content">
           <span className="lr-category">
-            {reel.category || "THE HAIR SPACE"}
+            {reel.category || "RICHBIT SALON"}
           </span>
 
           <h3 className="lr-card-title">
-            {reel.title || "THE HAIR SPACE Moments"}
+            {reel.title || "RICHBIT SALON Moments"}
           </h3>
 
           <span className="lr-watch">
@@ -361,10 +361,10 @@ function ReelModal({ reel, onClose }) {
         <div className="lr-modal-info">
           <div className="lr-modal-text">
             <span className="lr-modal-category">
-              {reel.category || "THE HAIR SPACE"}
+              {reel.category || "RICHBIT SALON"}
             </span>
 
-            <h3>{reel.title || "THE HAIR SPACE Moments"}</h3>
+            <h3>{reel.title || "RICHBIT SALON Moments"}</h3>
           </div>
 
           <button
@@ -402,14 +402,14 @@ export default function InstagramReels() {
               <span className="lr-eyebrow">INSTAGRAM</span>
 
               <h2 className="lr-title">
-                Life at<span> The Hair Space.</span>
+                Life at<span> RICHBIT SALON.</span>
               </h2>
             </div>
 
             <div className="lr-header-right">
               <p className="lr-description">
                 Follow our latest transformations, salon moments and
-                beautiful details from inside The Hair Space.
+                beautiful details from inside RICHBIT SALON.
               </p>
 
               <a

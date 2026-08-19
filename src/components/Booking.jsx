@@ -286,7 +286,7 @@ export default function Booking() {
 
           <div className="contact-top">
             <span className="contact-label">
-             The Hair Villa Unisex Salon
+              Blush Salon
             </span>
 
             <h3>
@@ -318,7 +318,7 @@ export default function Booking() {
             </a>
 
             <a
-              href="mailto:info@thehairspacesalon.com"
+              href="mailto:info@blushsalon.com"
               className="contact-line"
             >
               <span className="contact-icon">
@@ -327,7 +327,7 @@ export default function Booking() {
 
               <span>
                 <small>EMAIL US</small>
-                info@hairstudionSalon.com
+                info@blushsalon.com
               </span>
             </a>
 
@@ -378,7 +378,7 @@ export default function Booking() {
               </div>
 
               <span className="map-label">
-                MUMBAI
+                PUNE
               </span>
             </div>
 

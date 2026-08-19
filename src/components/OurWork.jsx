@@ -36,7 +36,7 @@ export default function OurWork() {
           <div className="lw-header-right">
             <p className="lw-description">
               A glimpse into the artistry, creativity and attention to
-              detail behind every The Hair Villa Unisex Salon  experience.
+              detail behind every Blush Salon  experience.
             </p>
           </div>
         </div>

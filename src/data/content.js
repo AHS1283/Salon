@@ -48,7 +48,7 @@ export const SERVICES = [
 
   {
     id: "service-2",
-    img: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnCZt4ozLsX490Xr1FGQazFMZyLLNo9QBWLUF9MsnuQJ4bBYb0-WOXEtKvJprQxnO_oyEoep6y2_OAIr7CAT_DWypUxVMVQs8dhPO1Hjxa0Tg-gQp_Q3zSGvxIklcCAdM69duSg=w243-h244-n-k-no-nu",
+    img: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk8w3PViOQY8xje7QreOUSnKuTYmmY3wgzjl1PNh3lrf5-Jj9oWMfCj2BxUgSxhI-TIRrrZdE0CZ2Ik-n3mWSZitE4E3OD0m-6etuzna-TA9RVnBa-ptDIBLItNY2mM92DPLJ8v27Dh9K_9=s680-w680-h510-rw",
     title: "Hair Color",
     desc: "Color, highlights & ombre",
     price: "₹1499",
@@ -246,7 +246,7 @@ export const LOCATIONS = [
   //   city: "Mumbai",
   //   area: "Bandra West",
   //   description:
-  //     "Our signature The Hair Villa Unisex Salon space in the heart of Bandra.",
+  //     "Our signature Blush Salon space in the heart of Bandra.",
   //   image:
   //     "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85",
   //   map:
@@ -260,7 +260,7 @@ export const LOCATIONS = [
     description:
       "A calm, intimate salon experience in Hinjewadi.",
     image:
-      "https://lh3.googleusercontent.com/TBKXtKDQ5X44LexDfXJ_EzJKPalQOGWm1tKCRgVFq3YmmJLfOnFedlYZCIbNcg9dKLletLfcRPeWCzye_QdJfrw5bIIV0KTq-nBLG-4=s0-rw",
+     "https://img4.nbstatic.in/tr:w-500/67668a942d8183000ac7b232.jpg",
     map:
       "https://www.google.com/maps/search/?api=1&query=The+Hair+Space+Pimple+Nilakh+Pune",
   },
@@ -270,7 +270,7 @@ export const LOCATIONS = [
   //   city: "Nashik",
   //   area: "College Road",
   //   description:
-  //     "Modern beauty, thoughtful service and The Hair Villa Unisex Salon warmth.",
+  //     "Modern beauty, thoughtful service and Blush Salon warmth.",
   //   image:
   //     "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85",
   //   map:
@@ -289,7 +289,7 @@ export const DUMMY_WORKS = [
     category: "Hair",
     title: "Signature Hair",
     imageUrl:
-     "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm48VNWwtAPyX8tTYc68uVuMkAeiPrANIyfS66m3UBN3VKSCmSbR1_RGH58OW0qZ1f5pyGgv9u33NSAbHaej2qkzbdTsAjnSJ2_W9DsMziSOCBVA--CbWuDbNp3g6DDd43s0uBK=s680-w680-h510-rw",
+     "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkLg9rDoMs6PexqFIaVMCbG_wlzCf02ft2HTh-KhaSDoLI8mLVLLX-SahprO7gZ1d_IhUqTrXfgmQjyzbBntXsX2jhvUZautt3a7B2PXXkkLApif1Sm7vfgttqTovLhqYsXZxblgzCpeC5f=s680-w680-h510-rw",
   },
 
   {
@@ -297,14 +297,14 @@ export const DUMMY_WORKS = [
     category: "Hair",
     title: "Luxury Styling",
     imageUrl:
-    "https://lh3.googleusercontent.com/6mnKk07Us8dTM_p0bH7YSQFI3YtZA5B4h7gxabcRzfCHGwgp9r_Shbc9QWmmslXyaur8N3eS0gVloDyvdeFJOdrq2rnC22fpKM4TjLMD=s0-rw",
+   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkB5xw0rd58LipK69B-RuO1PlG09BpXGoGVuIsgEbqRaOdXggtsoY9GPWMplpu6zWzisY5yWbTsxiEsLXdLzz25VTxU7dlP2gH5AzV9bX9ByF5NWb53gqUbjMXg7TQaenpM2MBPEMII_Gk=s680-w680-h510-rw",
   },
   {
     id: "dummy-3",
     category: "Skin",
     title: "Facial Care",
     imageUrl:
-    "https://lh3.googleusercontent.com/FHnWY4NxrTkpjCWNUOUQDa50mHcHnBr7JHQ7AcDSR3dpttJp6C8yfSxZM3TS9ITGp6OYBKVbkSEHx2UyBwH1zTuS6tkUqyrHoYKcnSIoUw=s0-rw",
+   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmXeAYgIbG4-PcuHgfZt9lEi-J657gmGNpRh00nviueeWXBXHNZ2x5ht9Wb99vSO7jFHYzK-aa5Yb1b1o7QkDCsNtNvRF6ntzJsV3UevH-W1wgzOD2Kf-Nw5cRWlwVvPgpBPYiw=s680-w680-h510-rw"
   },
 
   {
@@ -312,7 +312,7 @@ export const DUMMY_WORKS = [
     category: "Grooming",
     title: "Men's Grooming",
     imageUrl:
-      "https://lh3.googleusercontent.com/VcWmZFUQTDwWC8rcVy1xXozqJp9mPwwl4r5fIaHm7V3r_VNSqu8sC_Zr5A8K_FzvnEVGrGPTyKdEiwgZJg-cFDUCezIN2y83xRl4twT1=s0-rw",
+     "https://plain-apac-prod-public.komododecks.com/202608/19/LU6h306FOLwm094EB14q/image.png",
   },
   {
     id: "dummy-5",
@@ -342,7 +342,7 @@ export const DUMMY_WORKS = [
     category: "Interior",
     title: "Salon Interior",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkbbJe8rTMMBYK9VVzkzf9W--d3ei0aOJwIksF8YIWPCm2ZyRyzoeaFKE5FpumKTgG3E8DyzJgiJvobVMf5lDHkgmxpbNYDgxIeahLqxl03yv8PMmZPHYoEiRgAxFD2Xn-f52tg=s680-w680-h510-rw",
+     "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWktMRZec8i717gTV76xStj1yr2V0H16XRVr-NAf_w80FIUxUIPwyv0H6oej8nw1hcsOV3sJ7Jr1v9-6RlXGIAi4K14eLwOyLtzDZjLamndoRO5WFwIXwrPa7khpsDWZsJqdUT_U7Xv8P_bP=s680-w680-h510-rw",
 
   }  ];
 
@@ -375,7 +375,7 @@ export const DUMMY_WORKS = [
     id: "reel-1",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/hair1.mp4",
+    previewVideoUrl: "/videos/blush1.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -384,7 +384,7 @@ export const DUMMY_WORKS = [
     id: "reel-2",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/hair2.mp4",
+    previewVideoUrl: "/videos/blush2.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -393,7 +393,7 @@ export const DUMMY_WORKS = [
     id: "reel-3",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/hair3.mp4",
+    previewVideoUrl: "/videos/blush3.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -402,7 +402,7 @@ export const DUMMY_WORKS = [
     id: "reel-4",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/hair5.mp4",
+    previewVideoUrl: "/videos/blush4.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -411,7 +411,7 @@ export const DUMMY_WORKS = [
     id: "reel-5",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/hair4.mp4",
+    previewVideoUrl: "/videos/blush5.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -420,7 +420,7 @@ export const DUMMY_WORKS = [
     id: "reel-6",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/hair6.mp4",
+    previewVideoUrl: "/videos/blush6.mp4",
     instagramLink:
       "https://www.instagram.com/reel/DbvbJtONTzn/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
   },

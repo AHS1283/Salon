@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 import { NAV_LINKS } from "../data/content.js";
+import blushLogo from "../assets/logoblush.png";
 import "../Styles/Footer.css";
 
 export default function Footer() {
@@ -53,7 +54,6 @@ export default function Footer() {
 
   const handleNavClick = (link) => {
     const id = getSectionId(link);
-
     scrollToSection(id);
   };
 
@@ -121,8 +121,17 @@ export default function Footer() {
 
           <div className="footer-about">
 
+            {/* LOGO + NAME */}
             <div className="footer-logo">
-              The Hair Villa Unisex Salon
+              <img
+                src={blushLogo}
+                alt="Blush Salon Logo"
+                className="footer-logo-image"
+              />
+
+              <span className="footer-logo-name">
+                Blush Salon
+              </span>
             </div>
 
             <p>
@@ -208,9 +217,7 @@ export default function Footer() {
                   <button
                     type="button"
                     className="footer-link-button"
-                    onClick={() =>
-                      handleServiceClick(service)
-                    }
+                    onClick={() => handleServiceClick(service)}
                   >
                     {service}
                   </button>
@@ -247,7 +254,7 @@ export default function Footer() {
                   href="mailto:info@thehairspace.com"
                   className="footer-contact-link"
                 >
-                  info@thehairspace.com
+                  info@blushsalon.com
                 </a>
               </li>
 
@@ -263,7 +270,7 @@ export default function Footer() {
                     )
                   }
                 >
-                  123, WAKAD,
+                  Hinjewadi
                   <br />
                   Pune - 4411057
                 </button>
@@ -319,7 +326,7 @@ export default function Footer() {
         <div className="footer-bottom">
 
           <span>
-            © 2026  The Hair Villa Unisex Salon.
+            © 2026 Blush Salon.
             All rights reserved.
           </span>
 

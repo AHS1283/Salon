@@ -171,7 +171,7 @@ function ReelCard({ reel, onOpen }) {
           <img
             className="lr-image"
             src={thumbnail}
-            alt={reel.title || "The Hair Villa Unisex Salon Instagram Reel"}
+            alt={reel.title || "Blush Salon Instagram Reel"}
             loading="lazy"
             onError={() => setImageError(true)}
           />
@@ -353,10 +353,10 @@ function ReelModal({ reel, onClose }) {
         <div className="lr-modal-info">
           <div className="lr-modal-text">
             <span className="lr-modal-category">
-              {reel.category || "The Hair Villa Unisex Salon"}
+              {reel.category || "Blush Salon"}
             </span>
 
-            <h3>{reel.title || "The Hair Villa Unisex Salon Moments"}</h3>
+            <h3>{reel.title || "Blush Salon Moments"}</h3>
           </div>
 
           <button
@@ -394,14 +394,14 @@ export default function InstagramReels() {
               <span className="lr-eyebrow">INSTAGRAM</span>
 
               <h2 className="lr-title">
-                Life at<span> The Hair Villa Unisex Salon.</span>
+                Life at<span> Blush Salon.</span>
               </h2>
             </div>
 
             <div className="lr-header-right">
               <p className="lr-description">
                 Follow our latest transformations, salon moments and
-                beautiful details from inside The Hair Villa Unisex Salon.
+                beautiful details from inside Blush Salon.
               </p>
 
               <a

@@ -1,11 +1,6 @@
 /* =========================================================
    LUMIÈRE — APP GLOBAL CSS
-   Full Width / Edge-to-Edge Layout
-========================================================= */
-
-
-/* =========================================================
-   GLOBAL BOX SIZING
+   SAFE SOFT THEME / NO COMPONENT COLOR OVERRIDES
 ========================================================= */
 
 *,
@@ -14,39 +9,27 @@
   box-sizing: border-box;
 }
 
-
-/* =========================================================
-   ROOT / HTML / BODY
-========================================================= */
-
 html {
   width: 100%;
   min-width: 100%;
-
   margin: 0;
   padding: 0;
-
   scroll-behavior: smooth;
-
   overflow-x: hidden;
+  background: #fcf8f6;
 }
 
 body {
   width: 100%;
   min-width: 100%;
-
   margin: 0;
   padding: 0;
 
-  background: #ffffff;
+  /* Only the global base background is changed. */
+  background: #fcf8f6;
 
   overflow-x: hidden;
-
-  font-family:
-    "DM Sans",
-    Arial,
-    sans-serif;
-
+  font-family: "DM Sans", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,68 +37,39 @@ body {
 #root {
   width: 100%;
   min-width: 100%;
-
   margin: 0;
   padding: 0;
-
   overflow-x: hidden;
+  background: transparent;
 }
 
-
-/* =========================================================
-   APP ROOT
-========================================================= */
-
-.App {
+.App,
+.lumiere {
   width: 100%;
   min-width: 100%;
-
   margin: 0;
   padding: 0;
-
   overflow-x: hidden;
+  background: transparent;
 }
-
-
-/* =========================================================
-   MAIN
-========================================================= */
 
 main {
   width: 100%;
-
   margin: 0;
   padding: 0;
-
   overflow-x: hidden;
+  background: transparent;
 }
-
-
-/* =========================================================
-   SECTIONS
-========================================================= */
 
 section {
   width: 100%;
-
   margin: 0;
 }
 
-
-/* =========================================================
-   IMAGES
-========================================================= */
-
 img {
   max-width: 100%;
-
   display: block;
 }
-
-
-/* =========================================================
-   BUTTONS
-========================================================= */
 
 button,
 input,
@@ -124,30 +78,14 @@ select {
   font: inherit;
 }
 
-
-/* =========================================================
-   BUTTON RESET
-========================================================= */
-
 button {
   margin: 0;
 }
 
-
-/* =========================================================
-   LINKS
-========================================================= */
-
 a {
   color: inherit;
-
   text-decoration: none;
 }
-
-
-/* =========================================================
-   HEADINGS
-========================================================= */
 
 h1,
 h2,
@@ -158,42 +96,20 @@ h6 {
   margin-top: 0;
 }
 
-
-/* =========================================================
-   PARAGRAPHS
-========================================================= */
-
 p {
   margin-top: 0;
 }
-
-
-/* =========================================================
-   LISTS
-========================================================= */
 
 ul,
 ol {
   margin-top: 0;
 }
 
-
-/* =========================================================
-   FULL WIDTH UTILITY
-========================================================= */
-
 .full-width {
   width: 100%;
-
   margin-left: 0;
   margin-right: 0;
 }
-
-
-/* =========================================================
-   LUMIÈRE WRAPPER
-   Prevent accidental horizontal spacing
-========================================================= */
 
 .lumiere-hero,
 .site-footer,
@@ -204,45 +120,30 @@ ol {
 .about,
 .contact {
   width: 100%;
-
   margin-left: 0;
   margin-right: 0;
 }
 
-
-/* =========================================================
-   DESKTOP — PREVENT CONTAINER OVERFLOW
-========================================================= */
-
 @media (min-width: 769px) {
-
   .lumiere-hero {
     width: 100%;
     max-width: none;
-
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 768px) {
-
   html,
   body,
   #root,
   .App,
+  .lumiere,
   main {
     width: 100%;
     max-width: 100%;
-
     margin: 0;
     padding: 0;
-
     overflow-x: hidden;
   }
 
@@ -252,17 +153,12 @@ ol {
   }
 }
 
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 480px) {
-
   html,
   body,
   #root,
   .App,
+  .lumiere,
   main {
     width: 100%;
     min-width: 0;
@@ -270,13 +166,7 @@ ol {
   }
 }
 
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
   html {
     scroll-behavior: auto;
   }

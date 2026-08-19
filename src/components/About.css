@@ -80,7 +80,7 @@
     uploaded salon image visible.
   */
 
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
 
   transition:

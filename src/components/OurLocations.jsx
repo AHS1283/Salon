@@ -29,7 +29,7 @@ export default function Locations() {
 
             <h2 className="ll-title">
               Find your
-              <span> The Hair Villa Unisex Salon.</span>
+              <span> Blush Salon.</span>
             </h2>
 
           </div>
@@ -38,7 +38,7 @@ export default function Locations() {
           <div className="ll-header-right">
 
             <p className="ll-description">
-              Discover a The Hair Villa Unisex Salon near you,
+              Discover a Blush Salon near you,
               each thoughtfully designed to offer
               the same signature experience.
             </p>
@@ -77,7 +77,7 @@ export default function Locations() {
               <img
                 className="ll-image"
                 src={location.image}
-                alt={`${location.city} The Hair Villa Unisex Salon`}
+                alt={`${location.city} Blush Salon`}
                 loading="lazy"
               />
 
@@ -96,7 +96,7 @@ export default function Locations() {
                 </span>
 
                 <span className="ll-status">
-                  The Hair Villa Unisex Salon
+                  Blush Salon
                 </span>
 
               </div>

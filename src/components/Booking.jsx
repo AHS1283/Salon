@@ -286,7 +286,7 @@ export default function Booking() {
 
           <div className="contact-top">
             <span className="contact-label">
-              Blush Salon
+              To the Nines
             </span>
 
             <h3>
@@ -318,7 +318,7 @@ export default function Booking() {
             </a>
 
             <a
-              href="mailto:info@blushsalon.com"
+              href="mailto:info@bobunisexsalonandspa.com"
               className="contact-line"
             >
               <span className="contact-icon">
@@ -327,7 +327,7 @@ export default function Booking() {
 
               <span>
                 <small>EMAIL US</small>
-                info@blushsalon.com
+                info@tothenines.com
               </span>
             </a>
 
@@ -338,9 +338,9 @@ export default function Booking() {
 
               <span>
                 <small>VISIT US</small>
-                HINJEWADI, PHASE 1
+                Aundh
                 <br />
-                Pune - 411057
+                Pune - 411067
               </span>
             </div>
 

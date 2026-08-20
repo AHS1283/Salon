@@ -29,7 +29,7 @@ export default function Locations() {
 
             <h2 className="ll-title">
               Find your
-              <span> Blush Salon.</span>
+              <span> TO THE NINES.</span>
             </h2>
 
           </div>
@@ -38,7 +38,7 @@ export default function Locations() {
           <div className="ll-header-right">
 
             <p className="ll-description">
-              Discover a Blush Salon near you,
+              Discover a TO THE NINES near you,
               each thoughtfully designed to offer
               the same signature experience.
             </p>
@@ -77,7 +77,7 @@ export default function Locations() {
               <img
                 className="ll-image"
                 src={location.image}
-                alt={`${location.city} Blush Salon`}
+                alt={`${location.city} TO THE NINES`}
                 loading="lazy"
               />
 
@@ -96,7 +96,7 @@ export default function Locations() {
                 </span>
 
                 <span className="ll-status">
-                  Blush Salon
+                  TO THE NINES
                 </span>
 
               </div>

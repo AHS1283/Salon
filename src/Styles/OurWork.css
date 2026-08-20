@@ -1,5 +1,6 @@
 /* =========================================================
-   LUMIÈRE — OUR WORK (IMAGE ONLY)
+   LUMIÈRE — OUR WORK
+   IMAGE ONLY / FAST LOAD / SMOOTH REVEAL
    Prefix: lw-
 ========================================================= */
 
@@ -8,16 +9,11 @@
   box-sizing: border-box;
 }
 
-/* =========================================================
-   SECTION
-========================================================= */
-
 .lw-section {
   position: relative;
   width: 100%;
   padding: 76px 0 82px;
   overflow: hidden;
-
   background:
     radial-gradient(circle at 8% 15%, rgba(190, 147, 118, 0.07), transparent 28%),
     radial-gradient(circle at 92% 85%, rgba(211, 177, 150, 0.06), transparent 28%),
@@ -50,10 +46,6 @@
   pointer-events: none;
 }
 
-/* =========================================================
-   CONTAINER
-========================================================= */
-
 .lw-container {
   position: relative;
   z-index: 2;
@@ -61,9 +53,7 @@
   margin: 0 auto;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* HEADER */
 
 .lw-header {
   display: grid;
@@ -106,9 +96,7 @@
   line-height: 1.75;
 }
 
-/* =========================================================
-   LINE
-========================================================= */
+/* LINE */
 
 .lw-heading-line {
   display: flex;
@@ -132,21 +120,16 @@
   transform: rotate(45deg);
 }
 
-/* =========================================================
-   GRID — 4 columns x 2 rows, 8 equal-size cards
-   (4 on the left, 4 on the right — same style, no big tile)
-========================================================= */
+/* GRID */
 
 .lw-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: 170px 170px;
+  grid-template-rows: repeat(2, 170px);
   gap: 14px;
 }
 
-/* =========================================================
-   CARD — image only, animates in once loaded
-========================================================= */
+/* CARD */
 
 .lw-card {
   position: relative;
@@ -160,12 +143,13 @@
   cursor: pointer;
 
   opacity: 0;
-  transform: translateY(18px) scale(0.98);
+  transform: translateY(8px) scale(0.99);
+
   transition:
-    opacity 0.6s ease,
-    transform 0.6s cubic-bezier(.2,.7,.2,1),
-    box-shadow 0.45s ease,
-    border-color 0.45s ease;
+    opacity 0.35s ease,
+    transform 0.35s cubic-bezier(.2, .7, .2, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .lw-card.lw-loaded {
@@ -174,34 +158,12 @@
 }
 
 .lw-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1);
   border-color: #d8c0ae;
   box-shadow: 0 15px 35px rgba(54, 38, 29, 0.09);
 }
 
-/* SKELETON (while fetching from Firestore) */
-
-.lw-skeleton {
-  opacity: 1;
-  transform: none;
-  background: linear-gradient(
-    100deg,
-    #eee7e1 30%,
-    #f7f1ec 50%,
-    #eee7e1 70%
-  );
-  background-size: 200% 100%;
-  animation: lwShimmer 1.4s ease-in-out infinite;
-}
-
-@keyframes lwShimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-/* =========================================================
-   IMAGE
-========================================================= */
+/* IMAGE */
 
 .lw-image {
   position: absolute;
@@ -210,19 +172,19 @@
   height: 100%;
   max-width: none;
   object-fit: cover;
+  object-position: center center;
+
   transition:
-    transform 0.9s cubic-bezier(.2,.7,.2,1),
-    filter 0.6s ease;
+    transform 0.65s cubic-bezier(.2, .7, .2, 1),
+    filter 0.45s ease;
 }
 
 .lw-card:hover .lw-image {
-  transform: scale(1.08);
+  transform: scale(1.06);
   filter: brightness(0.85) saturate(1.05);
 }
 
-/* =========================================================
-   OVERLAY (subtle bottom shade, no text)
-========================================================= */
+/* OVERLAY */
 
 .lw-overlay {
   position: absolute;
@@ -235,9 +197,7 @@
   pointer-events: none;
 }
 
-/* =========================================================
-   EMPTY STATE
-========================================================= */
+/* EMPTY */
 
 .lw-empty {
   grid-column: 1 / -1;
@@ -248,9 +208,7 @@
   font-size: 11px;
 }
 
-/* =========================================================
-   BOTTOM / VIEW ALL BUTTON
-========================================================= */
+/* BUTTON */
 
 .lw-bottom {
   display: flex;
@@ -262,6 +220,7 @@
 .lw-view-all-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 13px 30px;
   border: 1px solid #d8bca9;
@@ -274,6 +233,7 @@
   letter-spacing: 1.5px;
   text-decoration: none;
   text-transform: uppercase;
+
   transition:
     background 0.35s ease,
     color 0.35s ease,
@@ -288,9 +248,7 @@
   transform: translateY(-2px);
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+/* TABLET */
 
 @media (max-width: 900px) {
   .lw-header {
@@ -304,9 +262,7 @@
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
   .lw-section {
@@ -354,6 +310,8 @@
   }
 }
 
+/* SMALL MOBILE */
+
 @media (max-width: 390px) {
   .lw-title {
     font-size: 31px;
@@ -361,5 +319,20 @@
 
   .lw-grid {
     grid-template-rows: repeat(4, 145px);
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .lw-card,
+  .lw-image,
+  .lw-view-all-btn {
+    transition: none;
+  }
+
+  .lw-card {
+    opacity: 1;
+    transform: none;
   }
 }

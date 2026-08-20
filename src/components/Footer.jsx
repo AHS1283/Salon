@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 import { NAV_LINKS } from "../data/content.js";
-import blushLogo from "../assets/logoblush.png";
+import blushLogo from "../assets/ninelogo.png";
 import "../Styles/Footer.css";
 
 export default function Footer() {
@@ -125,12 +125,12 @@ export default function Footer() {
             <div className="footer-logo">
               <img
                 src={blushLogo}
-                alt="Blush Salon Logo"
+                alt="TO THE NINES Logo"
                 className="footer-logo-image"
               />
 
               <span className="footer-logo-name">
-                Blush Salon
+                TO THE NINES
               </span>
             </div>
 
@@ -270,9 +270,9 @@ export default function Footer() {
                     )
                   }
                 >
-                  Hinjewadi
+                  Aundh
                   <br />
-                  Pune - 4411057
+                  Pune - 411067
                 </button>
               </li>
 
@@ -326,7 +326,7 @@ export default function Footer() {
         <div className="footer-bottom">
 
           <span>
-            © 2026 Blush Salon.
+            © 2026 TO THE NINES.
             All rights reserved.
           </span>
 

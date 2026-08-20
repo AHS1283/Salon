@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, Menu, X, Sparkles } from "lucide-react";
 import { NAV_LINKS } from "../data/content.js";
-import logo from "../assets/logoblush.png";
+import logo from "../assets/ninelogo.png";
 import "../Styles/Header.css";
 
 const ID_OVERRIDES = {
@@ -90,17 +90,17 @@ export default function Header() {
         <button
           className="luxury-logo"
           onClick={(e) => handleNavClick(e, "Home")}
-          aria-label="Blush Salon Home"
+          aria-label="TO THE NINES Home"
         >
           <img
             className="logo-image"
             src={logo}
-            alt="Blush Salon Logo"
+            alt="TO THE NINES Logo"
           />
 
           <span className="logo-text-group">
             <span className="logo-main">
-              Blush Salon
+              TO THE NINES
             </span>
 
             <span className="logo-sub">
@@ -237,7 +237,7 @@ export default function Header() {
 
         <div className="mobile-menu-footer">
           <span>
-            Blush Salon
+            TO THE NINES
           </span>
 
           <span>

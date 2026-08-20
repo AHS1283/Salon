@@ -33,7 +33,7 @@ export default function OurWork() {
           <div className="lw-header-right">
             <p className="lw-description">
               A glimpse into the artistry, creativity and attention to
-              detail behind every Xperiences Salon experience.
+              detail behind every Biilza Unisex Salon experience.
             </p>
           </div>
         </div>

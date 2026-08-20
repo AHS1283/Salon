@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 import { NAV_LINKS } from "../data/content.js";
-import blushLogo from "../assets/logox.png";
+import blushLogo from "../assets/biilzalogo.png";
 import "../Styles/Footer.css";
 
 export default function Footer() {
@@ -125,12 +125,12 @@ export default function Footer() {
             <div className="footer-logo">
               <img
                 src={blushLogo}
-                alt="Xperiences Salon Logo"
+                alt="Biilza Unisex Salon Logo"
                 className="footer-logo-image"
               />
 
               <span className="footer-logo-name">
-                Xperiences Salon
+                Biilza Unisex Salon
               </span>
             </div>
 
@@ -254,7 +254,7 @@ export default function Footer() {
                   href="mailto:info@thehairspace.com"
                   className="footer-contact-link"
                 >
-                  info@xperiencessalon.com
+                  info@biilzaunisexsalon.com
                 </a>
               </li>
 
@@ -270,7 +270,7 @@ export default function Footer() {
                     )
                   }
                 >
-                  Aundh
+                  Wakad
                   <br />
                   Pune - 411067
                 </button>
@@ -326,7 +326,7 @@ export default function Footer() {
         <div className="footer-bottom">
 
           <span>
-            © 2026 Xperiences Salon.
+            © 2026 Biilza Unisex Salon.
             All rights reserved.
           </span>
 

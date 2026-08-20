@@ -38,13 +38,6 @@ export const GALLERY_TABS = [
 ========================================================= */
 
 export const SERVICES = [
-  {
-    id: "service-1",
-    img: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkdWw4ab8pcY_KuV2KoZN46usCf-6BaysKijXhI1t7QYgmfpZCLEA6unQoDc0AF3dgYp2Fc9A29cKpVbqpYbAydiVj3dudhM97IHZwOCsYc9g82qtk8PLG83fL2r3vuftnmfM9ygQ=s680-w680-h510-rw",
-    title: "Hair Cut & Style",
-    desc: "Trendy cuts & styling for everyone",
-    price: "₹599",
-  },
 
  {
   id: "service-2",
@@ -256,12 +249,11 @@ export const LOCATIONS = [
    {
     number: "01",
     city: "Pune",
-    area: "Aundh",
+    area: "Wakad",
     description:
       "A calm, intimate salon experience in Aundh.",
     image:
-   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlC_A9ZKqd91qUHZL6lo6puLItq31RpBLtrBZv8xQz8QDAKkQ1BwNHqTng93FKY4NkEWD84jSRLWKosfy8s-IA-EzjfKPjTiRMuY2DzrlHXnDC-N7r1YiWw6sGPPSGXXQUJZR77=s680-w680-h510-rw",
-     
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnLBGgtsI7W76VGyUwlFD6hXyWXnHou25k6UhGCwHJJ4GaxBmX8gjycVWkjr9aJyDwWrT4CDsA0W9Zi_vL3PV_crL0SZjFG6TzY6vxnnUF1ewoh5laVrDtpxTcLL0UCvnkuVNRSFlVZ3Hw=s680-w680-h510-rw",
    map: 
    "https://www.google.com/maps/search/?api=1&query=The+Hair+Space+Pimple+Nilakh+Pune",
   },
@@ -271,7 +263,7 @@ export const LOCATIONS = [
   //   city: "Nashik",
   //   area: "College Road",
   //   description:
-  //     "Modern beauty, thoughtful service and Xperiences Salon warmth.",
+  //     "Modern beauty, thoughtful service and Biilza Unisex Salon warmth.",
   //   image:
   //     "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85",
   //   map:
@@ -290,36 +282,35 @@ export const DUMMY_WORKS = [
     category: "Hair",
     title: "Signature Hair",
     imageUrl:
-  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnyw54g9GjEbC7MdVeOq-KDReb7Uzm_54f9d7b4j8BMrqq4YQ1abn8e0Sem0egmzOQFfIos-88EG5GXAf-hCtQmni7fPtB7OE18TkpBV5nDL3FzeKa5xwWeVlZibAXoNHClLDoP=s680-w680-h510-rw",
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn6X_kzKl85aRr9tJKiNHVg1alKDZHQDZGkLhswWjVyCIJJZ6kimzd3J-ghdae4qTalHB1iAt1cNbA_3PjOSomO0A68lb5LBiCeFhg21h1bnoUNonFeqfZ7wCqXw0j8sH5Gktd59ZbWYPE=s680-w680-h510-rw",
   },
   {
     id: "dummy-2",
     category: "Hair",
     title: "Luxury Styling",
     imageUrl:
-  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlqO9czMr8XRfOFYXIYOlrjE0H9yuDam3hPgR_a4j7dipKswvxrISMTY7iFslExtfIiL6wq_gVJJbtTGLAI4x_E-H1wcGwl5Pq2nVkDyJEt2JvybmZbxjh3F7QAR_qOSkzu-EkgCQ=s680-w680-h510-rw",
+ "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlqO9czMr8XRfOFYXIYOlrjE0H9yuDam3hPgR_a4j7dipKswvxrISMTY7iFslExtfIiL6wq_gVJJbtTGLAI4x_E-H1wcGwl5Pq2nVkDyJEt2JvybmZbxjh3F7QAR_qOSkzu-EkgCQ=s680-w680-h510-rw",
   },
   {
     id: "dummy-3",
     category: "Skin",
     title: "Facial Care",
     imageUrl:
-  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmGdsGgLBaqy9h_ETZY8KFr-cAnllt5VZjlRGiaIIG1FN_ohjzU4SvNo0isBhSs4_tXg65NTCQ8qQqZym7fdqltXSAwUpiOF1dKVLHdhMUpAU2JjpHsrqShIhwD9F72_gCeP2NM=s680-w680-h510-rw",
+   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmVPF2yUkAR6JXZvMe4TL4qgFlKh1djySijrBLyxTBSGkbDIQap5p8FgAYKK4wSkutJN8UlivjGplTTfjOyqt-IV8uxP2rOND6kazNpeeRQ23YnTp4tTjSt3zwKYC6OCFigVkb54JnAi4dB=s680-w680-h510-rw", 
   },
-
-  {
+   {
     id: "dummy-4",
     category: "Grooming",
     title: "Men's Grooming",
     imageUrl:
-   "https://scontent.fpnq24-1.fna.fbcdn.net/v/t51.82787-15/703111640_18116091349738477_7411701515654828653_n.jpg?stp=dst-jpegr_tt6&cstp=mx3024x4032&ctp=s3024x4032&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dRaGT4ez7MsQ7kNvwHrt-Ak&_nc_oc=AdoBOep5XGirg4ezBeX4IJVOsKgcGPjRJtDmYtZYH3QxM30UK0tjC_TfVdUwZ_exfRA&_nc_zt=23&se=-1&_nc_ht=scontent.fpnq24-1.fna&_nc_gid=R5vtKCMvDkiw9RfZt7dNRg&_nc_ss=7b2a8&oh=00_AQGDNLuyNQz7Gi-YSEpmv3vls5-vGZzzVjqe7aMSWFNVQw&oe=6A8CB21D"
+   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn_BIXJz3-T8a_bUZ7mwBX61L05gW0uxPJhx2BA72pvewhzhal6PQCrx9nrwWBnrz71Hzfkh-h-ezhnWGfTz_vYGUlYOUc-LO8j0Ux7YZO3nIAuDg2MXJAa7UiHq0cWmW1Rp7S4CEE24etR=s680-w680-h510-rw",
   },
   {
     id: "dummy-5",
     category: "Beauty",
     title: "Soft Glam",
     imageUrl:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmwt3aPv_fmi2HS4F0G8-Fy8rldPAf9eaxvNKrVyim3zn3CKPLbjS9G70N_JUEC_Bus7IZxQXDoLWQLkjMACFEIGlQjPUA7KRRvZhSYM1AprP7uXbbWpMjddhb735k9fhWQxPdo6yN-eQtI=s680-w680-h510-rw"
+    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm1fK9RYW5tZcEH5lJ-hL_qfHO0hPUEt8AgQDufPYQFBF82S1rcIAbuZTk1Y710PTGYWgWFk3pog7ot3g2VhYVfkKtElfz8l6H6XOCLM5dS4QUoQWhqKP7UAQ9dM8o6VfkdFjhoeVqHsw4=s680-w680-h510-rw"
   },
 
   {
@@ -342,9 +333,8 @@ export const DUMMY_WORKS = [
     category: "Interior",
     title: "Salon Interior",
     imageUrl:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnK6O7OjosidnP9aiXjuYszy3qc7yqXRoalsfOq-PF21CC4d348OTEUuV_bA6ckFKvwR4oqEip8RW0kODlLsF85LNt8CZUiXR0wU_1NB6QNHqGWYRI5YcUlnucerTVKuXk_dVNR=s680-w680-h510-rw",
+    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmeBysg9tc1ZBKoax2dAQpUg51t_oeEPqBaHtFkK6OjtleaTrcRk4gX3j52e2VyEX2ClsxU7SwGMdT6OzRR5RV-2SLkl925gN0_RI6Z0NTmVBptPI3m35jwZJpZvflfLjJBQDPyN9xqS9zU=s680-w680-h510-rw",
   },
-
     ];
 
 
@@ -376,7 +366,7 @@ export const DUMMY_WORKS = [
     id: "reel-1",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/x1.mp4",
+    previewVideoUrl: "/videos/bizz1.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -385,7 +375,7 @@ export const DUMMY_WORKS = [
     id: "reel-2",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/x2.mp4",
+    previewVideoUrl: "/videos/bizz2.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -394,7 +384,7 @@ export const DUMMY_WORKS = [
     id: "reel-3",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/x3.mp4",
+    previewVideoUrl: "/videos/bizz3.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -403,7 +393,7 @@ export const DUMMY_WORKS = [
     id: "reel-4",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/x4.mp4",
+    previewVideoUrl: "/videos/bizz4.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -412,7 +402,7 @@ export const DUMMY_WORKS = [
     id: "reel-5",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/x5.mp4",
+    previewVideoUrl: "/videos/bizz5.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -421,7 +411,7 @@ export const DUMMY_WORKS = [
     id: "reel-6",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/x6.mp4",
+    previewVideoUrl: "/videos/bizz6.mp4",
     instagramLink:
       "https://www.instagram.com/reel/DbvbJtONTzn/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
   },

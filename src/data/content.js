@@ -260,9 +260,10 @@ export const LOCATIONS = [
     description:
       "A calm, intimate salon experience in Aundh.",
     image:
-   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn8U8yb9zro9yxElVElwRn6IzP89F_kKAjaD4OtTrflctZ-N4rmz5Vjsh9UgAr2mkiUCu9Eyw1JWm_dV9CCx77BalBLVonJYMlexCtH88kdSuwgbljehqGRUA_wTC0fkqDUUqEO=s680-w680-h510-rw",
-    map:
-      "https://www.google.com/maps/search/?api=1&query=The+Hair+Space+Pimple+Nilakh+Pune",
+   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlC_A9ZKqd91qUHZL6lo6puLItq31RpBLtrBZv8xQz8QDAKkQ1BwNHqTng93FKY4NkEWD84jSRLWKosfy8s-IA-EzjfKPjTiRMuY2DzrlHXnDC-N7r1YiWw6sGPPSGXXQUJZR77=s680-w680-h510-rw",
+     
+   map: 
+   "https://www.google.com/maps/search/?api=1&query=The+Hair+Space+Pimple+Nilakh+Pune",
   },
 
   // {
@@ -270,7 +271,7 @@ export const LOCATIONS = [
   //   city: "Nashik",
   //   area: "College Road",
   //   description:
-  //     "Modern beauty, thoughtful service and TO THE NINES warmth.",
+  //     "Modern beauty, thoughtful service and Xperiences Salon warmth.",
   //   image:
   //     "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85",
   //   map:
@@ -289,21 +290,21 @@ export const DUMMY_WORKS = [
     category: "Hair",
     title: "Signature Hair",
     imageUrl:
-   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWksTxg8GY5iJktl-swnMaVKeji0HcVmIZ5NLvixatS-gByhSEB_34dKsXUHbXw62zAk-DQ-F-g82wEsBXCNjrT7OR_cvuPZSpM-u8vxp7_rCbZ-4OE3N26Dv1W7bf06crvH0Y8=s680-w680-h510-rw",
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnyw54g9GjEbC7MdVeOq-KDReb7Uzm_54f9d7b4j8BMrqq4YQ1abn8e0Sem0egmzOQFfIos-88EG5GXAf-hCtQmni7fPtB7OE18TkpBV5nDL3FzeKa5xwWeVlZibAXoNHClLDoP=s680-w680-h510-rw",
   },
   {
     id: "dummy-2",
     category: "Hair",
     title: "Luxury Styling",
     imageUrl:
-  "https://lh3.googleusercontent.com/grass-cs/ACvplmNAyqn-iBrqY4q6Z-tkHUNXoshSAGUzz0fPehkJlOD0iR9n8Sw2d5PYIudtG13BNlOYft-5-TMn-whocIyLB2d0S3-tI5mu1MThmhRstEDs5lO5gf5tGK-x0korRWc7Xd7DCg=s680-w680-h510-rw",
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlqO9czMr8XRfOFYXIYOlrjE0H9yuDam3hPgR_a4j7dipKswvxrISMTY7iFslExtfIiL6wq_gVJJbtTGLAI4x_E-H1wcGwl5Pq2nVkDyJEt2JvybmZbxjh3F7QAR_qOSkzu-EkgCQ=s680-w680-h510-rw",
   },
   {
     id: "dummy-3",
     category: "Skin",
     title: "Facial Care",
     imageUrl:
-   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlfHQvMfTzoRFPP1q9l6FHvV8mLzSJf-dKuFNcGOwci9XWb5q7t3uuSHLAIveQ8hqXo84_zoRQbOQHIoj1dVI0fFmgtBXbGfuwiPD0x45JwwAYdRMPaFxbCNUGh5P-OmMzq50tv=w243-h305-n-k-no-nu",
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmGdsGgLBaqy9h_ETZY8KFr-cAnllt5VZjlRGiaIIG1FN_ohjzU4SvNo0isBhSs4_tXg65NTCQ8qQqZym7fdqltXSAwUpiOF1dKVLHdhMUpAU2JjpHsrqShIhwD9F72_gCeP2NM=s680-w680-h510-rw",
   },
 
   {
@@ -311,7 +312,7 @@ export const DUMMY_WORKS = [
     category: "Grooming",
     title: "Men's Grooming",
     imageUrl:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnvIMEP1e3GJp_XBAKC5AwDHmkGXroa4fBgSb35GGgvx01-vlpsZo8we624d1ehIxy7ms7kYjnMOYaCN2qReL6TWFKIUAHusiEYVaIWnw0ODbxM5u6nI9oMOsCbyNsmXUmTSjkJ=s680-w680-h510-rw",
+   "https://scontent.fpnq24-1.fna.fbcdn.net/v/t51.82787-15/703111640_18116091349738477_7411701515654828653_n.jpg?stp=dst-jpegr_tt6&cstp=mx3024x4032&ctp=s3024x4032&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dRaGT4ez7MsQ7kNvwHrt-Ak&_nc_oc=AdoBOep5XGirg4ezBeX4IJVOsKgcGPjRJtDmYtZYH3QxM30UK0tjC_TfVdUwZ_exfRA&_nc_zt=23&se=-1&_nc_ht=scontent.fpnq24-1.fna&_nc_gid=R5vtKCMvDkiw9RfZt7dNRg&_nc_ss=7b2a8&oh=00_AQGDNLuyNQz7Gi-YSEpmv3vls5-vGZzzVjqe7aMSWFNVQw&oe=6A8CB21D"
   },
   {
     id: "dummy-5",
@@ -334,14 +335,14 @@ export const DUMMY_WORKS = [
     category: "Spa",
     title: "Relaxing Spa",
     imageUrl:
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkdWw4ab8pcY_KuV2KoZN46usCf-6BaysKijXhI1t7QYgmfpZCLEA6unQoDc0AF3dgYp2Fc9A29cKpVbqpYbAydiVj3dudhM97IHZwOCsYc9g82qtk8PLG83fL2r3vuftnmfM9ygQ=s680-w680-h510-rw",
+     "https://scontent.fpnq24-1.fna.fbcdn.net/v/t39.30808-6/482075032_1182128463617451_5081598352556788693_n.jpg?stp=dst-jpg_tt6&cstp=mx1440x1800&ctp=s1440x1800&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kQq4D_K_vMAQ7kNvwGWSWIn&_nc_oc=AdpW2_PinY-Cvc53BF22TAQkt-4AGRh1uxBzQJfZxzhLduGdcstlO_MQTaJJhWwaM-U&_nc_zt=23&_nc_ht=scontent.fpnq24-1.fna&_nc_gid=8FEfAgOghsIInPQfGDGvwQ&_nc_ss=7b2a8&oh=00_AQHvSsoPinpdWWhULLPLZwSEq56GC-3RCDGPnIEDoOHOLQ&oe=6A8CC713"
   },
   {
     id: "dummy-8",
     category: "Interior",
     title: "Salon Interior",
     imageUrl:
-     "https://lh3.googleusercontent.com/grass-cs/ACvplmOuYAmkWrQjsbGzaZ3gA0BDqfOV7THc1YNpAgoAa7f0bbYCBfG335FpaiP_TBJ2LxAalI50qo7XY3gyXMckJVWVyZCnSsxQdYG8wNnu73BZbqLwUlPKowO2JQDTBYEwXT6Lz7sn=s680-w680-h510-rw",
+    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnK6O7OjosidnP9aiXjuYszy3qc7yqXRoalsfOq-PF21CC4d348OTEUuV_bA6ckFKvwR4oqEip8RW0kODlLsF85LNt8CZUiXR0wU_1NB6QNHqGWYRI5YcUlnucerTVKuXk_dVNR=s680-w680-h510-rw",
   },
 
     ];
@@ -375,7 +376,7 @@ export const DUMMY_WORKS = [
     id: "reel-1",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/nine1.mp4",
+    previewVideoUrl: "/videos/x1.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -384,7 +385,7 @@ export const DUMMY_WORKS = [
     id: "reel-2",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/nine2.mp4",
+    previewVideoUrl: "/videos/x2.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -393,7 +394,7 @@ export const DUMMY_WORKS = [
     id: "reel-3",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/nine3.mp4",
+    previewVideoUrl: "/videos/x3.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -402,7 +403,7 @@ export const DUMMY_WORKS = [
     id: "reel-4",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/nine4.mp4",
+    previewVideoUrl: "/videos/x4.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -411,7 +412,7 @@ export const DUMMY_WORKS = [
     id: "reel-5",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/nine5.mp4",
+    previewVideoUrl: "/videos/x5.mp4",
     instagramLink:
       "https://www.instagram.com/reel/YOUR_ACTUAL_REEL_ID/",
   },
@@ -420,7 +421,7 @@ export const DUMMY_WORKS = [
     id: "reel-6",
     thumbnailUrl:
       "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85",
-    previewVideoUrl: "/videos/nine6.mp4",
+    previewVideoUrl: "/videos/x6.mp4",
     instagramLink:
       "https://www.instagram.com/reel/DbvbJtONTzn/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
   },

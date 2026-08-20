@@ -171,7 +171,7 @@ function ReelCard({ reel, onOpen }) {
           <img
             className="lr-image"
             src={thumbnail}
-            alt={reel.title || "TO THE NINES Instagram Reel"}
+            alt={reel.title || "Xperiences Salon Instagram Reel"}
             loading="lazy"
             onError={() => setImageError(true)}
           />
@@ -353,10 +353,10 @@ function ReelModal({ reel, onClose }) {
         <div className="lr-modal-info">
           <div className="lr-modal-text">
             <span className="lr-modal-category">
-              {reel.category || "TO THE NINES"}
+              {reel.category || "Xperiences Salon"}
             </span>
 
-            <h3>{reel.title || "TO THE NINES Moments"}</h3>
+            <h3>{reel.title || "Xperiences Salon Moments"}</h3>
           </div>
 
           <button
@@ -394,14 +394,14 @@ export default function InstagramReels() {
               <span className="lr-eyebrow">INSTAGRAM</span>
 
               <h2 className="lr-title">
-                Life at<span> TO THE NINES.</span>
+                Life at<span> Xperiences Salon.</span>
               </h2>
             </div>
 
             <div className="lr-header-right">
               <p className="lr-description">
                 Follow our latest transformations, salon moments and
-                beautiful details from inside TO THE NINES.
+                beautiful details from inside Xperiences Salon.
               </p>
 
               <a

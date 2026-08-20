@@ -33,7 +33,7 @@ export default function OurWork() {
           <div className="lw-header-right">
             <p className="lw-description">
               A glimpse into the artistry, creativity and attention to
-              detail behind every TO THE NINES experience.
+              detail behind every Xperiences Salon experience.
             </p>
           </div>
         </div>

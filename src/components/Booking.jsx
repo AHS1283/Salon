@@ -286,7 +286,7 @@ export default function Booking() {
 
           <div className="contact-top">
             <span className="contact-label">
-              To the Nines
+              Xperiences Salon
             </span>
 
             <h3>
@@ -327,7 +327,7 @@ export default function Booking() {
 
               <span>
                 <small>EMAIL US</small>
-                info@tothenines.com
+                info@xperiencessalon.com
               </span>
             </a>
 

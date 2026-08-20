@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 import { NAV_LINKS } from "../data/content.js";
-import blushLogo from "../assets/ninelogo.png";
+import blushLogo from "../assets/logox.png";
 import "../Styles/Footer.css";
 
 export default function Footer() {
@@ -125,12 +125,12 @@ export default function Footer() {
             <div className="footer-logo">
               <img
                 src={blushLogo}
-                alt="TO THE NINES Logo"
+                alt="Xperiences Salon Logo"
                 className="footer-logo-image"
               />
 
               <span className="footer-logo-name">
-                TO THE NINES
+                Xperiences Salon
               </span>
             </div>
 
@@ -254,7 +254,7 @@ export default function Footer() {
                   href="mailto:info@thehairspace.com"
                   className="footer-contact-link"
                 >
-                  info@blushsalon.com
+                  info@xperiencessalon.com
                 </a>
               </li>
 
@@ -326,7 +326,7 @@ export default function Footer() {
         <div className="footer-bottom">
 
           <span>
-            © 2026 TO THE NINES.
+            © 2026 Xperiences Salon.
             All rights reserved.
           </span>
 
